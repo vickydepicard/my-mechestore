@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "prod_1",
+    "name": "Mèche Brésilienne 18 pouces",
+    "image": "http://localhost:4000/images/lisse.png",
+    "price": 42.5
+  },
+  {
+    "_id": "prod_2",
+    "name": "Closure 5x5 naturelle",
+    "image": "http://localhost:4000/images/closure.png",
+    "price": 27.99
+  },
+  {
+    "_id": "prod_3",
+    "name": "Perruque Lace Frontal 26 pouces",
+    "image": "http://localhost:4000/images/lace.png",
+    "price": 95
+  }
+]

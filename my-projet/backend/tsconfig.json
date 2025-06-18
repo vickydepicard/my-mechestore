@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "rootDir": ".",
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,           // ou "esnext" si tu cibles ES modules
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["**/*.ts", "routes/products.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "1",
+    "name": "Tissage Brésilien 45cm",
+    "image": "https://via.placeholder.com/300x400?text=Tissage+1",
+    "price": 80.99,
+    "sales": 150
+  },
+  {
+    "_id": "2",
+    "name": "Perruque Lace Front",
+    "image": "https://via.placeholder.com/300x400?text=Perruque",
+    "price": 129.99,
+    "sales": 120
+  },
+  {
+    "_id": "3",
+    "name": "Accessoires Capillaires",
+    "image": "https://via.placeholder.com/300x400?text=Accessoires",
+    "price": 29.99,
+    "sales": 200
+  }
+]
