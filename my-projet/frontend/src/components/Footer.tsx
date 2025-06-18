@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h4 className="font-bold mb-4 text-white">Contact</h4>
-          <p>84 rue d’Alésia,<br />75014 Paris</p>
-          <p>Service client : 01 71 93 24 48</p>
-          <p>Email : contact@maison-des-meches.fr</p>
+          <p>Marche Mboppi,<br />Douala , Cameroun</p>
+          <p>Service client : +2376 91 70 60 06</p>
+          <p>Email : contact@maison-des-meches.depicard.com</p>
         </div>
         <div>
           <h4 className="font-bold mb-4 text-white">Liens</h4>
@@ -31,6 +31,8 @@ export default function Footer() {
           <div className="flex space-x-4">
             <a href="https://instagram.com/la_maison_des_meches" className="hover:text-white">IG</a>
             <a href="https://facebook.com" className="hover:text-white">FB</a>
+            <a href="https://facebook.com" className="hover:text-white">TK</a>
+            <a href="https://facebook.com" className="hover:text-white">MG</a>
           </div>
         </div>
       </div>

@@ -3,6 +3,12 @@
     "_id": "prod_1",
     "name": "Mèche Brésilienne 18 pouces",
     "image": "http://localhost:4000/images/lisse.png",
+        "images": [
+      "http://localhost:4000/images/lisse.png",
+      "http://localhost:4000/images/lisse.png",
+      "http://localhost:4000/images/lisse.png",
+      "http://localhost:4000/images/closure.png"
+    ],
     "price": 42.5
   },
   {

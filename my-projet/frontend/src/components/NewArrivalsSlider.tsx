@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-interface Product {
-  _id: string;
-  name: string;
-  image: string;
-  price: number;
-}
+import React, { useEffect, useState, useContext } from "react";
+import { CartContext } from "./CartContext"; // Assure-toi d'importer le bon chemin
+import ProductModal from "./ProductModal";
 
 export default function NewArrivalsSlider() {
   const [items, setItems] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useContext(CartContext); // Utilisation du contexte panier
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     fetch("http://localhost:4000/api/products/new-arrivals")
@@ -24,82 +16,66 @@ export default function NewArrivalsSlider() {
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Erreur lors du chargement des nouveautés :", err);
+        console.error("Erreur : ", err);
         setLoading(false);
       });
   }, []);
 
-  if (loading)
-    return (
-      <p className="text-center py-10 text-gray-400 text-lg">
-        Chargement des nouveautés…
-      </p>
-    );
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+  };
 
-  if (!items.length)
-    return (
-      <p className="text-center py-10 text-red-500 text-lg">
-        Aucun nouveau produit trouvé.
-      </p>
-    );
+  const closeModal = () => {
+    setSelectedProduct(null);
+  };
+
+  if (loading) return <p className="text-center py-10">Chargement…</p>;
+  if (!items.length) return <p className="text-center py-10">Aucun produit trouvé</p>;
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <div className="inline-flex items-center mb-2">
-            <span className="text-sm px-3 py-1 bg-blue-100 text-blue-600 font-semibold rounded-full mr-2">
-              🆕 New
-            </span>
-            <h2 className="text-4xl font-extrabold text-gray-900">Nouveautés</h2>
-          </div>
-          <p className="text-gray-600 mt-2 text-lg">
-            Découvrez nos derniers produits ajoutés
-          </p>
-        </div>
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">🆕 Nouveautés</h2>
 
-        <Swiper
-          modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
           {items.map((p) => (
-            <SwiperSlide key={p._id} className="flex justify-center">
-              <div className="w-full max-w-xs bg-white rounded-2xl border border-gray-200 shadow hover:shadow-xl transition-shadow duration-300 hover:-translate-y-1">
-<div className="relative overflow-hidden rounded-t-2xl h-36 flex items-center justify-center">
-  <img
-    src={p.image}
-    alt={p.name}
-    loading="lazy"
-    className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105 mx-auto"
-  />
-  <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold uppercase px-3 py-1 rounded-full shadow">
-    Nouveau
-  </span>
-</div>
+            <div key={p._id} className="bg-white rounded-xl border shadow-sm hover:shadow-lg transition duration-300 flex flex-col">
+              <div className="overflow-hidden rounded-t-xl bg-gray-50 flex items-center justify-center p-4">
+                <img src={p.image} alt={p.name} className="object-contain max-h-48 transition-transform duration-300 hover:scale-105" />
+              </div>
 
-                <div className="p-4 text-center">
-                  <h3 className="text-base font-semibold text-gray-800 line-clamp-2">
-                    {p.name}
-                  </h3>
-                  <p className="text-xl font-bold text-pink-600 mt-2">
-                    {p.price.toFixed(2)} €
-                  </p>
-                  <button className="mt-3 bg-pink-600 hover:bg-pink-700 text-white w-full py-1.5 rounded-full text-sm font-semibold transition duration-300">
+              <div className="p-4 flex-1 flex flex-col justify-between">
+                <div className="text-center">
+                  <h3 className="font-medium text-gray-800 text-base line-clamp-2">{p.name}</h3>
+                  <p className="text-pink-600 font-bold text-lg mt-2">{p.price.toFixed(2)} €</p>
+                </div>
+
+                <div className="mt-4 space-y-2">
+                  <button
+                    onClick={() => addToCart(p)} // Ajout du produit au panier
+                    className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-full text-sm font-semibold transition"
+                  >
                     Ajouter au panier
+                  </button>
+                  <button
+                    onClick={() => openModal(p)}
+                    className="w-full border border-pink-500 text-pink-500 hover:bg-pink-50 py-2 rounded-full text-sm font-medium"
+                  >
+                    Voir détails
                   </button>
                 </div>
               </div>
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
+        </div>
+
+        {selectedProduct && (
+          <ProductModal
+            isOpen={!!selectedProduct}
+            onRequestClose={closeModal}
+            product={selectedProduct}
+          />
+        )}
       </div>
     </section>
   );
