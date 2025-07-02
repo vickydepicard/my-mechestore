@@ -1,160 +1,1088 @@
 [
 {
   "_id": "prod_1",
-  "name": "lisses brésiliennes",
-  "slug": "lot-3-meches-naturelles-lisses-bresiliennes",
+  "name": "Lot 3 Mèches Lisses Brésiliennes",
+  "slug": "lot-3-meches-lisses-bresiliennes",
   "images": [
-    "http://localhost:4000/images/closure.png",
-    "http://localhost:4000/images/lace.png",
-    "http://localhost:4000/images/lace.png"
+    "http://localhost:4000/images/meche-lisse/lisse.png",
+    "http://localhost:4000/images/meche-lisse/image.png",
+    "http://localhost:4000/images/meche-lisse/image1.png",
+    "http://localhost:4000/images/meche-lisse/meches-naturelles-lot.png"
   ],
-  "description": "Pour de beaux cheveux soyeux, lisses et brillants. Tissage brésilien en Lot de 3 soit 300 grammes de cheveux 100% naturels de qualité supérieure Remy Hair.",
-  "category": "Tissages / Lisse",
-  "tags": [
-    "tissage brésilien",
-    "mèches naturelles lisse",
-    "remy hair 9A",
-    "cheveux humains",
-    "cheveux noirs 1B"
-  ],
-  "colorOptions": ["noir 1B", "brun foncé", "chocolat", "blond cendré", "ombré noires-points blonds"],
+  "description": "Lot de 3 mèches naturelles brésiliennes lisses, soyeuses et résistantes, parfait pour un look élégant.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches lisses", "slug": "meches-lisses", "imageUrl": "http://localhost:4000/images/meche-lisse/bresilien.png" },
+      { "name": "Bundles", "slug": "bundles", "imageUrl": "http://localhost:4000/images/bundles.jpg" }
+    ]
+  },
+  "tags": ["remy hair", "brésilien", "cheveux naturels", "lisses"],
+  "options_de_couleur": ["#4B3621", "chocolat", "blond cendré", "ombré"],
+  "devise": "FCFA",
   "variants": [
-    { "length": "10\"", "color": "noir 1B", "price": 95.00, "oldPrice": 100.00, "stock": 5 },
-    { "length": "10\"", "color": "brun foncé", "price": 95.00, "oldPrice": 100.00, "stock": 3 },
-    { "length": "12\"", "color": "noir 1B", "price": 99.00, "oldPrice": 105.00, "stock": 4 },
-    { "length": "12\"", "color": "chocolat", "price": 99.00, "oldPrice": 105.00, "stock": 2 },
-    { "length": "14\"", "color": "noir 1B", "price": 105.00, "oldPrice": 110.00, "stock": 3 },
-    { "length": "14\"", "color": "blond cendré", "price": 105.00, "oldPrice": 110.00, "stock": 1 },
-    { "length": "16\"", "color": "noir 1B", "price": 109.01, "oldPrice": 114.01, "stock": 6 },
-    { "length": "16\"", "color": "ombré noires-points blonds", "price": 109.01, "oldPrice": 114.01, "stock": 4 },
-    { "length": "18\"", "color": "noir 1B", "price": 114.00, "oldPrice": 120.00, "stock": 8 },
-    { "length": "18\"", "color": "brun foncé", "price": 114.00, "oldPrice": 120.00, "stock": 5 },
-    { "length": "20\"", "color": "noir 1B", "price": 120.00, "oldPrice": 126.00, "stock": 2 },
-    { "length": "20\"", "color": "chocolat", "price": 120.00, "oldPrice": 126.00, "stock": 1 },
-    { "length": "22\"", "color": "noir 1B", "price": 125.00, "oldPrice": 132.00, "stock": 0 },
-    { "length": "22\"", "color": "blond cendré", "price": 125.00, "oldPrice": 132.00, "stock": 0 }
+    { "longueur": "10\"", "couleur": "#B98A68", "prix": 65000,  "ancien_prix": 85000,  "stock": 8 },
+    { "longueur": "12\"", "couleur": "#3B2E25", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "14\"", "couleur": "#101820", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "16\"", "couleur": "#ECEBE6", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "18\"", "couleur": "#B1B1B1", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "20\"", "couleur": "#6D2C35", "prix": 110000, "ancien_prix": 130000, "stock": 6 }, { "longueur": "18\"", "couleur": "#3B2E25", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "26\"", "couleur": "#4B3621", "prix": 110000, "ancien_prix": 130000, "stock": 6 }, { "longueur": "18\"", "couleur": "#E8A0B9", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "30\"", "couleur": "#E8A0B9", "prix": 130000, "ancien_prix": null, "stock": 3 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair 9A+", "Peut être coloré, coiffé et lissé"],
+  "points_forts": ["Livraison offerte dès 35€", "Paiement sécurisé CB/PayPal"],
+  "nouveau": false,
+  "stock_total": 21,
+  "en_stock": true,
+  "note": { "moyenne": 4.7, "nombre": 7 },
+  "avis": [
+    { "utilisateur": "Awa N.", "note": 5, "commentaire": "Très belle qualité, cheveux doux et brillants.", "date": "2025-06-10" },
+    { "utilisateur": "Mamadou S.", "note": 4, "commentaire": "Bon rapport qualité-prix.", "date": "2025-06-15" }
+  ],
+  "createdAt": "2025-05-28T08:00:00.000Z",
+  "updatedAt": "2025-06-20T14:00:00.000Z"
+},
+{
+  "_id": "prod_23",
+  "name": "Tissage bresilien avec closure - Tissage lisse",
+  "slug": "Tissage-bresilien-avec-closure-Tissage lisse",
+  "images": [
+    "http://localhost:4000/images/meche-lisse/cheveux-Naturels-avec-closure.png",
+    "http://localhost:4000/images/meche-lisse/cheveux-Naturels-avec-closure-v.png",
+    "http://localhost:4000/images/meche-lisse/cheveux-Naturels-avec-closure-all.png",
+    "http://localhost:4000/images/meche-lisse/meches-naturelles-lot.png"
+  ],
+  "description": "Tissage bresilien avec closure - Tissage lisse, soyeuses et résistantes, parfait pour un look élégant.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches lisses", "slug": "meches-lisses", "imageUrl": "http://localhost:4000/images/meche-lisse/lisse.png" },
+      { "name": "Bundles", "slug": "bundles", "imageUrl": "http://localhost:4000/images/bundles.jpg" }
+    ]
+  },
+  "tags": ["remy hair", "brésilien", "cheveux naturels", "lisses"],
+  "options_de_couleur": ["#4B3621", "chocolat", "blond cendré", "ombré"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "10\"", "couleur": "#B98A68", "prix": 65000,  "ancien_prix": 85000,  "stock": 0 },
+    { "longueur": "12\"", "couleur": "#3B2E25", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "14\"", "couleur": "#101820", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "16\"", "couleur": "#ECEBE6", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "18\"", "couleur": "#B1B1B1", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "20\"", "couleur": "#6D2C35", "prix": 110000, "ancien_prix": 130000, "stock": 6 }, { "longueur": "18\"", "couleur": "#3B2E25", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "26\"", "couleur": "#4B3621", "prix": 110000, "ancien_prix": 130000, "stock": 6 }, { "longueur": "18\"", "couleur": "#E8A0B9", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "30\"", "couleur": "#E8A0B9", "prix": 130000, "ancien_prix": null, "stock": 3 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair 9A+", "Peut être coloré, coiffé et lissé"],
+  "points_forts": ["Livraison offerte dès 35€", "Paiement sécurisé CB/PayPal"],
+  "nouveau": false,
+  "stock_total": 21,
+  "en_stock": true,
+  "note": { "moyenne": 4.7, "nombre": 7 },
+  "avis": [
+    { "utilisateur": "Awa N.", "note": 5, "commentaire": "Très belle qualité, cheveux doux et brillants.", "date": "2025-06-10" },
+    { "utilisateur": "Mamadou S.", "note": 4, "commentaire": "Bon rapport qualité-prix.", "date": "2025-06-15" }
+  ],
+  "createdAt": "2025-05-28T08:00:00.000Z",
+  "updatedAt": "2025-06-20T14:00:00.000Z"
+},
+{
+  "_id": "prod_24",
+  "name": "Extensions de Cheveux Raw Hair Naturels – Qualité Supérieure",
+  "slug": "extensions-de-cheveux-raw-hair-naturels-qualite-superieure",
+  "images": [
+    "http://localhost:4000/images/meche-lisse/extensions-de-cheveux-raw-hair-naturels-qualite-superieure.png",
+    "http://localhost:4000/images/meche-lisse/extensions-de-cheveux-raw-hair-naturels-qualite-superieure-b.png",
+    "http://localhost:4000/images/meche-lisse/extensions-de-cheveux-raw-hair-naturels-qualite-superieure-1.png",
+    "http://localhost:4000/images/meche-lisse/extensions-de-cheveux-raw-hair-naturels-qualite-superieure-2.png",
+    "http://localhost:4000/images/meche-lisse/extensions-de-cheveux-raw-hair-naturels-qualite-superieure-3.png"
+  ],
+  "description": "Extensions de Cheveux Raw Hair Naturels – Qualité Supérieure, soyeuses et résistantes, parfaites pour un look élégant.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      {
+        "name": "Mèches lisses",
+        "slug": "meches-lisses",
+        "imageUrl": "http://localhost:4000/images/meche-lisse/bresilien.png"
+      },
+      {
+        "name": "Bundles",
+        "slug": "bundles",
+        "imageUrl": "http://localhost:4000/images/bundles.jpg"
+      }
+    ]
+  },
+  "tags": ["remy hair", "brésilien", "cheveux naturels", "lisses"],
+  "options_de_couleur": ["#4B3621", "chocolat", "blond cendré", "ombré"],
+  "devise": "FCFA",
+  "variants": [
+    {
+      "longueur": "10\"",
+      "couleur": "#B98A68",
+      "prix": 65000,
+      "ancien_prix": 85000,
+      "stock": 0
+    },
+    {
+      "longueur": "12\"",
+      "couleur": "#3B2E25",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6
+    },
+    {
+      "longueur": "14\"",
+      "couleur": "#101820",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6
+    },
+    {
+      "longueur": "16\"",
+      "couleur": "#ECEBE6",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6
+    },
+    {
+      "longueur": "18\"",
+      "couleur": "#B1B1B1",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6
+    },
+    {
+      "longueur": "20\"",
+      "couleur": "#6D2C35",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6
+    },
+    {
+      "longueur": "26\"",
+      "couleur": "#4B3621",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6
+    },
+    {
+      "longueur": "30\"",
+      "couleur": "#E8A0B9",
+      "prix": 130000,
+      "ancien_prix": null,
+      "stock": 3
+    }
   ],
   "details": [
-    "✔️ Cheveux 100% naturels - qualité premium Remy Hair 9A+",
-    "✔️ Texture : cheveux humains lisses (straight)",
-    "✔️ Couleur naturelle : noir 1B",
-    "✔️ Poids : 300 grammes (3 paquets de 100g)",
-    "✔️ Durée d’utilisation : jusqu’à 2 ans",
-    "✔️ Aucun risque de perte au brossage",
-    "✔️ Peut être coloré, lissé, bouclé",
-    "✔️ Compatible avec closure"
+    "Cheveux 100% naturels Remy Hair 9A+",
+    "Peut être coloré, coiffé et lissé"
   ],
-  "highlights": [
-    "📦 Livraison offerte dès 35€ en France métropolitaine",
-    "🚚 Livraison rapide : 24h à 72h ouvrées",
-    "🔐 Paiement sécurisé (CB, Paypal)",
-    "💳 Paiement en 3 fois sans frais dès 100€"
+  "points_forts": [
+    "Livraison offerte dès 35€",
+    "Paiement sécurisé CB/PayPal"
   ],
-  "isNew": true,
-  "totalStock": 50,
-  "inStock": true,
-  "rating": {
-    "average": 4.5,
-    "count": 12
+  "nouveau": false,
+  "stock_total": 39,
+  "en_stock": true,
+  "note": {
+    "moyenne": 4.7,
+    "nombre": 7
   },
-  "reviews": [
+  "avis": [
     {
-      "user": "Awa N.",
-      "rating": 5,
-      "comment": "Très belle qualité de mèches, je recommande à 100% !",
+      "utilisateur": "Awa N.",
+      "note": 5,
+      "commentaire": "Très belle qualité, cheveux doux et brillants.",
       "date": "2025-06-10"
     },
     {
-      "user": "Marie K.",
-      "rating": 4,
-      "comment": "Bon produit mais j’aurais aimé plus de volume.",
-      "date": "2025-05-25"
+      "utilisateur": "Mamadou S.",
+      "note": 4,
+      "commentaire": "Bon rapport qualité-prix.",
+      "date": "2025-06-15"
     }
   ],
-  "createdAt": "2025-06-01T10:00:00.000Z",
-  "updatedAt": "2025-06-18T13:00:00.000Z"
+  "createdAt": "2025-05-28T08:00:00.000Z",
+  "updatedAt": "2025-06-20T14:00:00.000Z"
 },
+{
+  "_id": "prod_4",
+  "name": "Tissage brésilien lisse 100% cheveux naturels remy",
+  "slug": "bundle-bresilien-lisse",
+  "images": [
+    "http://localhost:4000/images/meche-lisse/bresilien.png",
+    "http://localhost:4000/images/meche-lisse/bresilien-1.png",
+    "http://localhost:4000/images/meche-lisse/bresilien-2.png",
+    "http://localhost:4000/images/meche-lisse/bresilien-3.png",
+    "http://localhost:4000/images/meche-lisse/bresilien-4.png"
+  ],
+  "description": "Lot de 3 mèches brésiliennes lisses 100% naturelles Remy, texture douce et soyeuse.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Bundles", "slug": "bundles", "imageUrl": "http://localhost:4000/images/bundles.jpg" },
+      { "name": "Mèches lisses", "slug": "meches-lisses", "imageUrl": "http://localhost:4000/images/meches-lisses.png" }
+    ]
+  },
+  "tags": ["remy hair", "tissage", "brésilien", "lisse"],
+  "options_de_couleur": ["noir naturel", "chocolat"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "16\"", "couleur": "noir naturel", "prix": 85000, "ancien_prix": 100000, "stock": 10 },
+    { "longueur": "16\"", "couleur": "chocolat", "prix": 90000, "ancien_prix": null, "stock": 6 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair", "Texture soyeuse"],
+  "points_forts": ["Facile à coiffer", "Durée de vie longue"],
+  "nouveau": false,
+  "stock_total": 16,
+  "en_stock": true,
+  "note": { "moyenne": 4.6, "nombre": 13 },
+  "avis": [
+    { "utilisateur": "Karim B.", "note": 5, "commentaire": "Très bonne qualité.", "date": "2025-06-14" }
+  ],
+  "createdAt": "2025-05-15T10:00:00.000Z",
+  "updatedAt": "2025-06-20T11:00:00.000Z"
+},
+
+
+
+
+{
+  "_id": "prod_3",
+  "name": "Lot 3 Mèches Kinky Curly",
+  "slug": "lot-3-meches-kinky-curly",
+  "images": [
+    "http://localhost:4000/images/kinky/cheveux-remy-lot.png",
+    "http://localhost:4000/images/kinky/cheveux-remy-lot1.png",
+    "http://localhost:4000/images/kinky/cheveux-remy-lot2.png",
+    "http://localhost:4000/images/kinky/cheveux-remy-lot3.png",
+    "http://localhost:4000/images/kinky/cheveux-remy-lot4.png"
+  ],
+  "description": "Lot de mèches kinky curly, texture afro naturelle idéale pour un volume maximal.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" }
+    ]
+  },
+  "tags": ["remy hair", "kinky curly", "naturel", "volume"],
+  "options_de_couleur": ["noir naturel"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "12\"", "couleur": "noir naturel", "prix": 70000, "ancien_prix": 85000, "stock": 9 },
+    { "longueur": "16\"", "couleur": "noir naturel", "prix": 95000, "ancien_prix": null, "stock": 7 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair", "Très volumineux et doux"],
+  "points_forts": ["Texture naturelle", "Facile à coiffer"],
+  "nouveau": true,
+  "stock_total": 16,
+  "en_stock": true,
+  "note": { "moyenne": 4.7, "nombre": 14 },
+  "avis": [
+    { "utilisateur": "Nadia L.", "note": 5, "commentaire": "J’adore le volume et la texture!", "date": "2025-06-20" }
+  ],
+  "createdAt": "2025-06-01T10:00:00.000Z",
+  "updatedAt": "2025-06-22T11:00:00.000Z"
+},
+{
+  "_id": "prod_25",
+  "name": "Tissage kinky curly 100% cheveux naturels",
+  "slug": "Tissage-kinky-curly-cheveux-naturels",
+  "images": [
+    "http://localhost:4000/images/kinky/tissage-curly-meche.png",
+    "http://localhost:4000/images/kinky/tissage-curly-meche1.png",
+    "http://localhost:4000/images/kinky/tissage-curly-meche2.png",
+    "http://localhost:4000/images/kinky/tissage-curly-meche3.png"
+  ],
+  "description": "Lot de mèches kinky curly, texture afro naturelle idéale pour un volume maximal.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" }
+    ]
+  },
+  "tags": ["remy hair", "kinky curly", "naturel", "volume"],
+  "options_de_couleur": ["noir naturel"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "12\"", "couleur": "noir naturel", "prix": 70000, "ancien_prix": 85000, "stock": 9 },
+    { "longueur": "16\"", "couleur": "noir naturel", "prix": 95000, "ancien_prix": null, "stock": 7 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair", "Très volumineux et doux"],
+  "points_forts": ["Texture naturelle", "Facile à coiffer"],
+  "nouveau": true,
+  "stock_total": 16,
+  "en_stock": true,
+  "note": { "moyenne": 4.7, "nombre": 14 },
+  "avis": [
+    { "utilisateur": "Nadia L.", "note": 5, "commentaire": "J’adore le volume et la texture!", "date": "2025-06-20" }
+  ],
+  "createdAt": "2025-06-01T10:00:00.000Z",
+  "updatedAt": "2025-06-22T11:00:00.000Z"
+},
+{
+  "_id": "prod_26",
+  "name": "Lot 3 mèches naturelles Kinky Curly Avec Closure",
+  "slug": "Lot-3-mèches-naturelles-Kinky-Curly-Avec-Closure",
+  "images": [
+    "http://localhost:4000/images/kinky/lot-avec-closure.png",
+    "http://localhost:4000/images/kinky/lot-avec-closure1.png",
+    "http://localhost:4000/images/kinky/lot-avec-closure2.png",
+    "http://localhost:4000/images/kinky/lot-avec-closure4.png"
+  ],
+  "description": "Lot de mèches kinky curly, texture afro naturelle idéale pour un volume maximal.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" }
+    ]
+  },
+  "tags": ["remy hair", "kinky curly", "naturel", "volume"],
+  "options_de_couleur": ["noir naturel"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "12\"", "couleur": "noir naturel", "prix": 70000, "ancien_prix": 85000, "stock": 9 },
+    { "longueur": "16\"", "couleur": "noir naturel", "prix": 95000, "ancien_prix": null, "stock": 7 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair", "Très volumineux et doux"],
+  "points_forts": ["Texture naturelle", "Facile à coiffer"],
+  "nouveau": true,
+  "stock_total": 16,
+  "en_stock": true,
+  "note": { "moyenne": 4.7, "nombre": 14 },
+  "avis": [
+    { "utilisateur": "Nadia L.", "note": 5, "commentaire": "J’adore le volume et la texture!", "date": "2025-06-20" }
+  ],
+  "createdAt": "2025-06-01T10:00:00.000Z",
+  "updatedAt": "2025-06-22T11:00:00.000Z"
+},
+{
+  "_id": "prod_27",
+  "name": "Tissage frisé Pissy curls",
+  "slug": "Tissage-frisé-Pissy-curls",
+  "images": [
+    "http://localhost:4000/images/kinky/pissy-curl.png",
+    "http://localhost:4000/images/kinky/pissy-curl1.png",
+    "http://localhost:4000/images/kinky/pissy-curl2.png"
+  ],
+  "description": "Lot de mèches kinky curly, texture afro naturelle idéale pour un volume maximal.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" },
+      { "name": "Mèches kinky curly", "slug": "meches-kinky-curly", "imageUrl": "http://localhost:4000/images/meches-kinky-curly.png" }
+    ]
+  },
+  "tags": ["remy hair", "kinky curly", "naturel", "volume"],
+  "options_de_couleur": ["noir naturel"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "12\"", "couleur": "noir naturel", "prix": 70000, "ancien_prix": 85000, "stock": 9 },
+    { "longueur": "16\"", "couleur": "noir naturel", "prix": 95000, "ancien_prix": null, "stock": 7 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair", "Très volumineux et doux"],
+  "points_forts": ["Texture naturelle", "Facile à coiffer"],
+  "nouveau": true,
+  "stock_total": 16,
+  "en_stock": true,
+  "note": { "moyenne": 4.7, "nombre": 14 },
+  "avis": [
+    { "utilisateur": "Nadia L.", "note": 5, "commentaire": "J’adore le volume et la texture!", "date": "2025-06-20" }
+  ],
+  "createdAt": "2025-06-01T10:00:00.000Z",
+  "updatedAt": "2025-06-22T11:00:00.000Z"
+},
+
 
 {
   "_id": "prod_2",
-  "name": "lisses brésiliennes",
-  "slug": "lot-3-meches-naturelles-lisses-bresiliennes",
+  "name": "Lot 3 Mèches Bouclées Malaisiennes",
+  "slug": "lot-3-meches-bouclees-malaisiennes",
   "images": [
-    "http://localhost:4000/images/lace.png",
-    "http://localhost:4000/images/lace.png",
-    "http://localhost:4000/images/lace.png"
+    "http://localhost:4000/images/bouclees1.png",
+    "http://localhost:4000/images/bouclees2.png"
   ],
-  "description": "Pour de beaux cheveux soyeux, lisses et brillants. Tissage brésilien en Lot de 3 soit 300 grammes de cheveux 100% naturels de qualité supérieure Remy Hair.",
-  "category": "Tissages / Lisse",
-  "tags": [
-    "tissage brésilien",
-    "mèches naturelles lisse",
-    "remy hair 9A",
-    "cheveux humains",
-    "cheveux noirs 1B"
-  ],
-  "colorOptions": ["noir 1B", "brun foncé", "chocolat", "blond cendré", "ombré noires-points blonds"],
-  "variants": [
-    { "length": "10\"", "color": "noir 1B", "price": 95.00, "oldPrice": 100.00, "stock": 5 },
-    { "length": "10\"", "color": "brun foncé", "price": 95.00, "oldPrice": 100.00, "stock": 3 },
-    { "length": "12\"", "color": "noir 1B", "price": 99.00, "oldPrice": 105.00, "stock": 4 },
-    { "length": "12\"", "color": "chocolat", "price": 99.00, "oldPrice": 105.00, "stock": 2 },
-    { "length": "14\"", "color": "noir 1B", "price": 105.00, "oldPrice": 110.00, "stock": 3 },
-    { "length": "14\"", "color": "blond cendré", "price": 105.00, "oldPrice": 110.00, "stock": 1 },
-    { "length": "16\"", "color": "noir 1B", "price": 109.01, "oldPrice": 114.01, "stock": 6 },
-    { "length": "16\"", "color": "ombré noires-points blonds", "price": 109.01, "oldPrice": 114.01, "stock": 4 },
-    { "length": "18\"", "color": "noir 1B", "price": 114.00, "oldPrice": 120.00, "stock": 8 },
-    { "length": "18\"", "color": "brun foncé", "price": 114.00, "oldPrice": 120.00, "stock": 5 },
-    { "length": "20\"", "color": "noir 1B", "price": 120.00, "oldPrice": 126.00, "stock": 2 },
-    { "length": "20\"", "color": "chocolat", "price": 120.00, "oldPrice": 126.00, "stock": 1 },
-    { "length": "22\"", "color": "noir 1B", "price": 125.00, "oldPrice": 132.00, "stock": 0 },
-    { "length": "22\"", "color": "blond cendré", "price": 125.00, "oldPrice": 132.00, "stock": 0 }
-  ],
-  "details": [
-    "✔️ Cheveux 100% naturels - qualité premium Remy Hair 9A+",
-    "✔️ Texture : cheveux humains lisses (straight)",
-    "✔️ Couleur naturelle : noir 1B",
-    "✔️ Poids : 300 grammes (3 paquets de 100g)",
-    "✔️ Durée d’utilisation : jusqu’à 2 ans",
-    "✔️ Aucun risque de perte au brossage",
-    "✔️ Peut être coloré, lissé, bouclé",
-    "✔️ Compatible avec closure"
-  ],
-  "highlights": [
-    "📦 Livraison offerte dès 35€ en France métropolitaine",
-    "🚚 Livraison rapide : 24h à 72h ouvrées",
-    "🔐 Paiement sécurisé (CB, Paypal)",
-    "💳 Paiement en 3 fois sans frais dès 100€"
-  ],
-  "isNew": true,
-  "totalStock": 5,
-  "inStock": true,
-  "rating": {
-    "average": 4.5,
-    "count": 12
+  "description": "Mèches naturelles bouclées Malaisiennes, douces et volumineuses pour un look glam et naturel.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches bouclées", "slug": "meches-bouclees", "imageUrl": "http://localhost:4000/images/meches-bouclees.png" },
+      { "name": "Bundles", "slug": "bundles", "imageUrl": "http://localhost:4000/images/bundles.jpg" }
+    ]
   },
-  "reviews": [
-    {
-      "user": "Awa N.",
-      "rating": 5,
-      "comment": "Très belle qualité de mèches, je recommande à 100% !",
-      "date": "2025-06-10"
-    },
-    {
-      "user": "Marie K.",
-      "rating": 4,
-      "comment": "Bon produit mais j’aurais aimé plus de volume.",
-      "date": "2025-05-25"
-    }
+  "tags": ["remy hair", "bouclées", "naturelles", "cheveux humains"],
+  "options_de_couleur": ["noir naturel", "chocolat", "ombré"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "14\"", "couleur": "noir naturel", "prix": 70000, "ancien_prix": 90000, "stock": 7 },
+    { "longueur": "20\"", "couleur": "ombré", "prix": 110000, "ancien_prix": null, "stock": 8 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair 8A", "Tenue longue durée"],
+  "points_forts": ["Texture douce", "Facile à coiffer"],
+  "nouveau": false,
+  "stock_total": 15,
+  "en_stock": true,
+  "note": { "moyenne": 4.5, "nombre": 15 },
+  "avis": [
+    { "utilisateur": "Aminata K.", "note": 4, "commentaire": "Très satisfaite, belles boucles!", "date": "2025-06-10" }
+  ],
+  "createdAt": "2025-05-20T10:00:00.000Z",
+  "updatedAt": "2025-06-18T15:00:00.000Z"
+},
+{
+  "_id": "prod_28",
+  "name": "Tissage afro curly 100% cheveux naturels",
+  "slug": "Tissage afro curly 100% cheveux naturels",
+  "images": [
+    "http://localhost:4000/images/boucle/cheveux-frises-crepus.png",
+    "http://localhost:4000/images/boucle/cheveux-frises-crepus2.png"
+  ],
+  "description": "Mèches naturelles bouclées Malaisiennes, douces et volumineuses pour un look glam et naturel.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches bouclées", "slug": "meches-bouclees", "imageUrl": "http://localhost:4000/images/meches-bouclees.png" },
+      { "name": "Bundles", "slug": "bundles", "imageUrl": "http://localhost:4000/images/bundles.jpg" }
+    ]
+  },
+  "tags": ["remy hair", "bouclées", "naturelles", "cheveux humains"],
+  "options_de_couleur": ["noir naturel", "chocolat", "ombré"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "14\"", "couleur": "noir naturel", "prix": 70000, "ancien_prix": 90000, "stock": 7 },
+    { "longueur": "20\"", "couleur": "ombré", "prix": 110000, "ancien_prix": null, "stock": 8 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair 8A", "Tenue longue durée"],
+  "points_forts": ["Texture douce", "Facile à coiffer"],
+  "nouveau": false,
+  "stock_total": 15,
+  "en_stock": true,
+  "note": { "moyenne": 4.5, "nombre": 15 },
+  "avis": [
+    { "utilisateur": "Aminata K.", "note": 4, "commentaire": "Très satisfaite, belles boucles!", "date": "2025-06-10" }
+  ],
+  "createdAt": "2025-05-20T10:00:00.000Z",
+  "updatedAt": "2025-06-18T15:00:00.000Z"
+},
+{
+  "_id": "prod_29",
+  "name": "Tissage Raw Hair Burmese Curly - Extensions 100% Cheveux Bruts",
+  "slug": "Tissage Raw Hair Burmese Curly - Extensions 100% Cheveux Bruts",
+  "images": [
+    "http://localhost:4000/images/boucle/tissage-raw-hair-burmese-curly-extensions-100-cheveux-bruts.png",
+    "http://localhost:4000/images/boucle/tissage-raw-hair-burmese-curly-extensions-100-cheveux-bruts1.png",
+    "http://localhost:4000/images/boucle/tissage-raw-hair-burmese-curly-extensions-100-cheveux-bruts3.png",
+    "http://localhost:4000/images/boucle/tissage-raw-hair-burmese-curly-extensions-100-cheveux-bruts4.png",
+    "http://localhost:4000/images/boucle/tissage-raw-hair-burmese-curly-extensions-100-cheveux-bruts5.png"
+  ],
+  "description": "Mèches naturelles bouclées Malaisiennes, douces et volumineuses pour un look glam et naturel.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      { "name": "Mèches bouclées", "slug": "meches-bouclees", "imageUrl": "http://localhost:4000/images/meches-bouclees.png" },
+      { "name": "Bundles", "slug": "bundles", "imageUrl": "http://localhost:4000/images/bundles.jpg" }
+    ]
+  },
+  "tags": ["remy hair", "bouclées", "naturelles", "cheveux humains"],
+  "options_de_couleur": ["noir naturel", "chocolat", "ombré"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "14\"", "couleur": "noir naturel", "prix": 70000, "ancien_prix": 90000, "stock": 7 },
+    { "longueur": "20\"", "couleur": "ombré", "prix": 110000, "ancien_prix": null, "stock": 8 }
+  ],
+  "details": ["Cheveux 100% naturels Remy Hair 8A", "Tenue longue durée"],
+  "points_forts": ["Texture douce", "Facile à coiffer"],
+  "nouveau": false,
+  "stock_total": 15,
+  "en_stock": true,
+  "note": { "moyenne": 4.5, "nombre": 15 },
+  "avis": [
+    { "utilisateur": "Aminata K.", "note": 4, "commentaire": "Très satisfaite, belles boucles!", "date": "2025-06-10" }
+  ],
+  "createdAt": "2025-05-20T10:00:00.000Z",
+  "updatedAt": "2025-06-18T15:00:00.000Z"
+},
+
+
+
+
+{
+  "_id": "prod_5",
+  "name": "Perruque Lace Front Lisse 24\"",
+  "slug": "perruque-lace-front-lisse-24",
+  "images": [
+    "http://localhost:4000/images/perruque-lisse1.png",
+    "http://localhost:4000/images/perruque-lisse2.png"
+  ],
+  "description": "Perruque lace front 24 pouces lisse, cheveux 100% naturels Remy Hair, ultra soyeux pour un rendu naturel.",
+  "categorie": {
+    "principale": "Perruques",
+    "sous_categories": [
+      { "name": "Lace Front", "slug": "lace-front", "imageUrl": "http://localhost:4000/images/lace-front.png" },
+      { "name": "Lisse", "slug": "lisse", "imageUrl": "http://localhost:4000/images/perruque-lisse.png" }
+    ]
+  },
+  "tags": ["lace front", "perruque", "lisse", "naturel"],
+  "options_de_couleur": ["noir naturel", "chocolat", "ombré"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "24\"", "couleur": "noir naturel", "prix": 150000, "ancien_prix": 180000, "stock": 5 },
+    { "longueur": "24\"", "couleur": "ombré", "prix": 165000, "ancien_prix": null, "stock": 3 }
+  ],
+  "details": ["Cheveux Remy Hair 9A+", "Dentelle invisible", "Facile à poser"],
+  "points_forts": ["Effet cuir chevelu naturel", "Livraison offerte"],
+  "nouveau": true,
+  "stock_total": 8,
+  "en_stock": true,
+  "note": { "moyenne": 4.8, "nombre": 19 },
+  "avis": [
+    { "utilisateur": "Fatou D.", "note": 5, "commentaire": "Incroyablement naturelle!", "date": "2025-06-12" }
+  ],
+  "createdAt": "2025-05-22T09:00:00.000Z",
+  "updatedAt": "2025-06-19T12:00:00.000Z"
+},
+{
+  "_id": "prod_6",
+  "name": "Perruque Bouclée 20\" Full Lace",
+  "slug": "perruque-bouclee-20-full-lace",
+  "images": [
+    "http://localhost:4000/images/perruque-bouclee1.png",
+    "http://localhost:4000/images/perruque-bouclee2.png"
+  ],
+  "description": "Perruque bouclée Full Lace 20 pouces, cheveux naturels Remy Hair, boucles bien définies et souples.",
+  "categorie": {
+    "principale": "Perruques",
+    "sous_categories": [
+      { "name": "Full Lace", "slug": "full-lace", "imageUrl": "http://localhost:4000/images/full-lace.png" },
+      { "name": "Bouclée", "slug": "bouclee", "imageUrl": "http://localhost:4000/images/perruque-bouclee.png" }
+    ]
+  },
+  "tags": ["full lace", "perruque", "bouclée", "naturel"],
+  "options_de_couleur": ["noir naturel", "chocolat"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "20\"", "couleur": "noir naturel", "prix": 145000, "ancien_prix": 170000, "stock": 6 },
+    { "longueur": "20\"", "couleur": "chocolat", "prix": 150000, "ancien_prix": null, "stock": 4 }
+  ],
+  "details": ["Cheveux Remy Hair 9A+", "Full Lace intégrale", "Boucles rebondies"],
+  "points_forts": ["Confort maximum", "Pose personnalisable"],
+  "nouveau": false,
+  "stock_total": 10,
+  "en_stock": true,
+  "note": { "moyenne": 4.6, "nombre": 17 },
+  "avis": [
+    { "utilisateur": "Saliou K.", "note": 5, "commentaire": "Parfait pour un look glam!", "date": "2025-06-14" }
+  ],
+  "createdAt": "2025-05-25T09:00:00.000Z",
+  "updatedAt": "2025-06-20T13:00:00.000Z"
+},
+
+
+
+
+{
+  "_id": "prod_7",
+  "name": "Bonnet Satin Double Couche Noir",
+  "slug": "bonnet-satin-double-couche-noir",
+  "images": [
+    "http://localhost:4000/images/bonnet1.png",
+    "http://localhost:4000/images/bonnet2.png"
+  ],
+  "description": "Bonnet en satin double couche pour protéger vos coiffures et vos cheveux naturels pendant le sommeil.",
+  "categorie": {
+    "principale": "Accessoires",
+    "sous_categories": [
+      { "name": "Bonnets", "slug": "bonnets", "imageUrl": "http://localhost:4000/images/accessoires/bonnet-tissage-perruque.png" }
+    ]
+  },
+  "tags": ["bonnet", "satin", "protection cheveux"],
+  "options_de_couleur": ["noir", "bordeaux", "bleu marine"],
+  "devise": "FCFA",
+  "variants": [
+    { "taille": "Standard", "couleur": "noir", "prix": 6000, "ancien_prix": 8000, "stock": 30 }
+  ],
+  "details": ["Double couche satin haut de gamme", "Élastique ajustable"],
+  "points_forts": ["Réduit la casse", "Idéal pour cheveux naturels"],
+  "nouveau": true,
+  "stock_total": 30,
+  "en_stock": true,
+  "note": { "moyenne": 4.5, "nombre": 14 },
+  "avis": [
+    { "utilisateur": "Adama S.", "note": 5, "commentaire": "Super confortable, mes cheveux sont protégés.", "date": "2025-06-15" }
   ],
   "createdAt": "2025-06-01T10:00:00.000Z",
-  "updatedAt": "2025-06-18T13:00:00.000Z"
+  "updatedAt": "2025-06-22T11:00:00.000Z"
 },
-  {
-    "_id": "prod_3",
-    "name": "Accessoires Capillaires",
-    "image": "http://localhost:4000/images/lace.png",
-    "price": 29.99,
-    "sales": 200
-  }
+{
+  "_id": "prod_8",
+  "name": "Peigne Afro Large Dents",
+  "slug": "peigne-afro-large-dents",
+  "images": [
+    "http://localhost:4000/images/peigne1.png",
+    "http://localhost:4000/images/peigne2.png"
+  ],
+  "description": "Peigne afro à dents larges, idéal pour démêler les cheveux texturés sans casser les boucles.",
+  "categorie": {
+    "principale": "Accessoires",
+    "sous_categories": [
+      { "name": "Peignes", "slug": "peignes", "imageUrl": "http://localhost:4000/images/accessoires/image.png" }
+    ]
+  },
+  "tags": ["peigne", "afro", "démêlage", "cheveux bouclés"],
+  "options_de_couleur": ["noir", "rose", "violet"],
+  "devise": "FCFA",
+  "variants": [
+    { "taille": "Standard", "couleur": "noir", "prix": 3500, "ancien_prix": 4500, "stock": 40 }
+  ],
+  "details": ["Dents larges robustes", "Forme ergonomique"],
+  "points_forts": ["Prévient la casse", "Idéal pour boucles et afro"],
+  "nouveau": false,
+  "stock_total": 40,
+  "en_stock": true,
+  "note": { "moyenne": 4.6, "nombre": 12 },
+  "avis": [
+    { "utilisateur": "Mariam D.", "note": 5, "commentaire": "Indispensable pour mes boucles!", "date": "2025-06-18" }
+  ],
+  "createdAt": "2025-05-25T10:00:00.000Z",
+  "updatedAt": "2025-06-23T11:00:00.000Z"
+},
+
+
+
+
+
+
+{
+  "_id": "prod_9",
+  "name": "Masque Hydratant Profond aux Huiles Naturelles",
+  "slug": "masque-hydratant-profond-huiles-naturelles",
+  "images": [
+    "http://localhost:4000/images/masque1.png",
+    "http://localhost:4000/images/masque2.png"
+  ],
+  "description": "Masque capillaire hydratant intense enrichi en huiles naturelles pour nourrir et revitaliser les cheveux secs et abîmés.",
+  "categorie": {
+    "principale": "Produits d’entretien",
+    "sous_categories": [
+      { "name": "Masques", "slug": "masques", "imageUrl": "http://localhost:4000/images/masques.png" }
+    ]
+  },
+  "tags": ["masque", "hydratant", "cheveux secs", "huiles naturelles"],
+  "options_de_couleur": [],
+  "devise": "FCFA",
+  "variants": [
+    { "volume": "200ml", "prix": 18000, "ancien_prix": 22000, "stock": 25 }
+  ],
+  "details": ["Formule riche en huiles essentielles", "Protège et répare les cheveux"],
+  "points_forts": ["Hydratation longue durée", "Convient à tous types de cheveux"],
+  "nouveau": true,
+  "stock_total": 25,
+  "en_stock": true,
+  "note": { "moyenne": 4.8, "nombre": 20 },
+  "avis": [
+    { "utilisateur": "Claire B.", "note": 5, "commentaire": "Mes cheveux sont plus doux et réparés.", "date": "2025-06-21" }
+  ],
+  "createdAt": "2025-06-05T10:00:00.000Z",
+  "updatedAt": "2025-06-24T11:00:00.000Z"
+},
+{
+  "_id": "prod_10",
+  "name": "Après-shampoing Réparateur à la kératine",
+  "slug": "apres-shampoing-reparateur-keratine",
+  "images": [
+    "http://localhost:4000/images/apres-shampoing1.png",
+    "http://localhost:4000/images/apres-shampoing2.png"
+  ],
+  "description": "Après-shampoing enrichi en kératine pour renforcer et réparer les cheveux fragilisés et cassants.",
+  "categorie": {
+    "principale": "Produits d’entretien",
+    "sous_categories": [
+      { "name": "Après-shampoings", "slug": "apres-shampoings", "imageUrl": "http://localhost:4000/images/apres-shampoings.png" }
+    ]
+  },
+  "tags": ["après-shampoing", "réparateur", "kératine", "cheveux cassants"],
+  "options_de_couleur": [],
+  "devise": "FCFA",
+  "variants": [
+    { "volume": "250ml", "prix": 17000, "ancien_prix": 21000, "stock": 30 }
+  ],
+  "details": ["Renforce la fibre capillaire", "Lutte contre la casse"],
+  "points_forts": ["Texture légère", "Effet démêlant efficace"],
+  "nouveau": true,
+  "stock_total": 30,
+  "en_stock": true,
+  "note": { "moyenne": 4.7, "nombre": 18 },
+  "avis": [
+    { "utilisateur": "Léa M.", "note": 5, "commentaire": "Mes cheveux sont renforcés et faciles à coiffer.", "date": "2025-06-22" }
+  ],
+  "createdAt": "2025-06-07T10:00:00.000Z",
+  "updatedAt": "2025-06-25T11:00:00.000Z"
+},
+{
+  "_id": "prod_11",
+  "name": "Perruque Lace Front Naturelle 16\"",
+  "slug": "perruque-lace-front-naturelle-16",
+  "images": [
+    "http://localhost:4000/images/perruque16_1.png",
+    "http://localhost:4000/images/perruque16_2.png"
+  ],
+  "description": "Perruque naturelle lace front 16 pouces avec cheveux Remy de haute qualité, très douce au toucher.",
+  "categorie": {
+    "principale": "Perruques",
+    "sous_categories": [
+      { "name": "Lace Front", "slug": "lace-front", "imageUrl": "http://localhost:4000/images/lace-front.png" }
+    ]
+  },
+  "tags": ["perruque", "lace front", "remy hair", "naturelle"],
+  "options_de_couleur": ["noir naturel", "ombré clair"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "16\"", "couleur": "noir naturel", "prix": 135000, "ancien_prix": 160000, "stock": 5 },
+    { "longueur": "16\"", "couleur": "ombré clair", "prix": 140000, "ancien_prix": null, "stock": 4 }
+  ],
+  "details": ["Cheveux Remy 100% naturels", "Front lace confortable et respirant"],
+  "points_forts": ["Longue durée", "Look très naturel"],
+  "nouveau": true,
+  "stock_total": 9,
+  "en_stock": true,
+  "note": { "moyenne": 4.8, "nombre": 10 },
+  "avis": [
+    { "utilisateur": "Julie P.", "note": 5, "commentaire": "Très confortable et naturelle.", "date": "2025-06-22" }
+  ],
+  "createdAt": "2025-06-07T10:00:00.000Z",
+  "updatedAt": "2025-06-23T10:00:00.000Z"
+},
+{
+  "_id": "prod_12",
+  "name": "Perruque Bob Naturelle Lace Front 12\"",
+  "slug": "perruque-bob-naturelle-lace-front-12",
+  "images": [
+    "http://localhost:4000/images/bob12_1.png",
+    "http://localhost:4000/images/bob12_2.png"
+  ],
+  "description": "Perruque Bob courte 12 pouces, lace front naturelle avec cheveux Remy doux et brillants.",
+  "categorie": {
+    "principale": "Perruques",
+    "sous_categories": [
+      { "name": "Bob", "slug": "bob", "imageUrl": "http://localhost:4000/images/bob.png" }
+    ]
+  },
+  "tags": ["perruque", "bob", "lace front", "naturelle"],
+  "options_de_couleur": ["noir naturel", "chocolat"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "12\"", "couleur": "noir naturel", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
+    { "longueur": "12\"", "couleur": "chocolat", "prix": 115000, "ancien_prix": null, "stock": 4 }
+  ],
+  "details": ["Cheveux 100% naturels Remy", "Style bob court et tendance"],
+  "points_forts": ["Facile à coiffer", "Look naturel"],
+  "nouveau": true,
+  "stock_total": 10,
+  "en_stock": true,
+  "note": { "moyenne": 4.8, "nombre": 11 },
+  "avis": [
+    { "utilisateur": "Laura F.", "note": 5, "commentaire": "Super confortable et stylée.", "date": "2025-06-22" }
+  ],
+  "createdAt": "2025-06-03T10:00:00.000Z",
+  "updatedAt": "2025-06-24T11:00:00.000Z"
+},
+{
+  "_id": "prod_13",
+  "name": "Perruque Courte Afro Naturelle 10\"",
+  "slug": "perruque-courte-afro-naturelle-10",
+  "images": [
+    "http://localhost:4000/images/afro10_1.png",
+    "http://localhost:4000/images/afro10_2.png"
+  ],
+  "description": "Perruque courte afro 10 pouces, texture naturelle avec cheveux Remy pour un style afro authentique.",
+  "categorie": {
+    "principale": "Perruques",
+    "sous_categories": [
+      { "name": "Afro", "slug": "afro", "imageUrl": "http://localhost:4000/images/afro.png" }
+    ]
+  },
+  "tags": ["perruque", "afro", "naturelle", "remy hair"],
+  "options_de_couleur": ["noir naturel"],
+  "devise": "FCFA",
+  "variants": [
+    { "longueur": "10\"", "couleur": "noir naturel", "prix": 100000, "ancien_prix": 120000, "stock": 7 }
+  ],
+  "details": ["Cheveux Remy 100% naturels", "Style afro naturel et volumineux"],
+  "points_forts": ["Look naturel", "Facile à entretenir"],
+  "nouveau": true,
+  "stock_total": 7,
+  "en_stock": true,
+  "note": { "moyenne": 4.9, "nombre": 8 },
+  "avis": [
+    { "utilisateur": "Marie D.", "note": 5, "commentaire": "Très belle texture et style.", "date": "2025-06-20" }
+  ],
+  "createdAt": "2025-06-06T10:00:00.000Z",
+  "updatedAt": "2025-06-23T10:30:00.000Z"
+},
+{
+  "_id": "prod_17",
+  "name": "Lace Frontal 13x6 Transparent Premium",
+  "slug": "lace-frontal-13x6-transparent-premium",
+  "images": [
+    "http://localhost:4000/images/lace-frontal-13x6-1.png",
+    "http://localhost:4000/images/lace-frontal-13x6-2.png"
+  ],
+  "description": "Lace frontal 13x6 ultra transparente pour une finition invisible et naturelle sur tous types de coiffures.",
+  "categorie": {
+    "principale": "Lace",
+    "sous_categories": [
+      { "name": "Frontals", "slug": "frontals", "imageUrl": "http://localhost:4000/images/frontals.png" }
+    ]
+  },
+  "tags": ["lace", "frontal", "transparent", "cheveux naturels", "remy"],
+  "options_de_couleur": ["noir naturel", "chocolat", "blond cendré"],
+  "devise": "FCFA",
+  "variants": [
+    { "taille": "13x6", "couleur": "noir naturel", "prix": 105000, "ancien_prix": 125000, "stock": 8 },
+    { "taille": "13x6", "couleur": "chocolat", "prix": 110000, "ancien_prix": null, "stock": 5 }
+  ],
+  "details": [
+    "Dentelle ultra fine et résistante",
+    "Cheveux Remy 100% naturels",
+    "Facile à poser et à entretenir"
+  ],
+  "points_forts": [
+    "Aspect naturel parfait",
+    "Adapté à tous types de cheveux"
+  ],
+  "nouveau": true,
+  "stock_total": 13,
+  "en_stock": true,
+  "note": { "moyenne": 4.9, "nombre": 18 },
+  "avis": [
+    { "utilisateur": "Marie C.", "note": 5, "commentaire": "Lace invisible, très facile à coiffer.", "date": "2025-06-20" }
+  ],
+  "createdAt": "2025-06-01T10:00:00.000Z",
+  "updatedAt": "2025-06-25T12:00:00.000Z"
+},
+{
+  "_id": "prod_18",
+  "name": "Closure Lace 5x5 Naturelle",
+  "slug": "closure-lace-5x5-naturelle",
+  "images": [
+    "http://localhost:4000/images/closure-lace-5x5-1.png",
+    "http://localhost:4000/images/closure-lace-5x5-2.png"
+  ],
+  "description": "Closure dentelle 5x5 avec cheveux Remy, offrant un look naturel et une bonne durabilité.",
+  "categorie": {
+    "principale": "Lace",
+    "sous_categories": [
+      { "name": "Closures", "slug": "closures", "imageUrl": "http://localhost:4000/images/closures.png" }
+    ]
+  },
+  "tags": ["closure", "dentelle", "remy", "cheveux naturels"],
+  "options_de_couleur": ["noir naturel", "chocolat"],
+  "devise": "FCFA",
+  "variants": [
+    { "taille": "5x5", "couleur": "noir naturel", "prix": 60000, "ancien_prix": 75000, "stock": 12 },
+    { "taille": "5x5", "couleur": "chocolat", "prix": 62000, "ancien_prix": null, "stock": 9 }
+  ],
+  "details": [
+    "Dentelle de qualité supérieure",
+    "Cheveux 100% naturels Remy",
+    "Facile à poser et entretenir"
+  ],
+  "points_forts": [
+    "Look naturel impeccable",
+    "Résistance à l'usure"
+  ],
+  "nouveau": true,
+  "stock_total": 21,
+  "en_stock": true,
+  "note": { "moyenne": 4.8, "nombre": 20 },
+  "avis": [
+    { "utilisateur": "Claire L.", "note": 5, "commentaire": "Très satisfaite de cette closure, facile à coiffer.", "date": "2025-06-22" }
+  ],
+  "createdAt": "2025-06-03T09:00:00.000Z",
+  "updatedAt": "2025-06-24T13:00:00.000Z"
+},
+{
+  "_id": "prod_19",
+  "name": "Lace Frontal 13x4 avec Baby Hair",
+  "slug": "lace-frontal-13x4-baby-hair",
+  "images": [
+    "http://localhost:4000/images/lace-frontal-13x4-1.png",
+    "http://localhost:4000/images/lace-frontal-13x4-2.png"
+  ],
+  "description": "Frontal 13x4 en dentelle avec baby hair pour une finition ultra naturelle et élégante.",
+  "categorie": {
+    "principale": "Lace",
+    "sous_categories": [
+      { "name": "Frontals", "slug": "frontals", "imageUrl": "http://localhost:4000/images/frontals.png" }
+    ]
+  },
+  "tags": ["lace", "frontal", "baby hair", "naturel", "remy"],
+  "options_de_couleur": ["noir naturel", "blond cendré"],
+  "devise": "FCFA",
+  "variants": [
+    { "taille": "13x4", "couleur": "noir naturel", "prix": 95000, "ancien_prix": 115000, "stock": 6 },
+    { "taille": "13x4", "couleur": "blond cendré", "prix": 100000, "ancien_prix": null, "stock": 4 }
+  ],
+  "details": [
+    "Dentelle fine et durable",
+    "Baby hair naturel et doux",
+    "Cheveux Remy 100% naturels"
+  ],
+  "points_forts": [
+    "Facile à poser",
+    "Aspect ultra naturel"
+  ],
+  "nouveau": true,
+  "stock_total": 10,
+  "en_stock": true,
+  "note": { "moyenne": 4.9, "nombre": 14 },
+  "avis": [
+    { "utilisateur": "Nathalie P.", "note": 5, "commentaire": "Look très naturel et confortable.", "date": "2025-06-21" }
+  ],
+  "createdAt": "2025-06-05T10:00:00.000Z",
+  "updatedAt": "2025-06-25T11:00:00.000Z"
+},
+{
+    "_id": "prod_20",
+    "name": "Closure Dentelle 4x4 Lisse Naturelle",
+    "slug": "closure-dentelle-4x4-lisse-naturelle",
+    "images": [
+      "http://localhost:4000/images/closure4x4-lisse1.png",
+      "http://localhost:4000/images/closure4x4-lisse2.png"
+    ],
+    "description": "Closure dentelle 4x4 avec cheveux Remy lisses, offrant une finition naturelle et élégante.",
+    "categorie": {
+      "principale": "Closure",
+      "sous_categories": [
+        { "name": "Closures", "slug": "closures", "imageUrl": "http://localhost:4000/images/closures.png" }
+      ]
+    },
+    "tags": ["closure", "dentelle", "lisse", "remy", "naturel"],
+    "options_de_couleur": ["noir naturel", "chocolat", "blond foncé"],
+    "devise": "FCFA",
+    "variants": [
+      { "taille": "4x4", "couleur": "noir naturel", "prix": 48000, "ancien_prix": 60000, "stock": 10 },
+      { "taille": "4x4", "couleur": "chocolat", "prix": 50000, "ancien_prix": null, "stock": 7 }
+    ],
+    "details": [
+      "Dentelle de qualité supérieure",
+      "Cheveux 100% naturels Remy",
+      "Facile à poser et entretenir"
+    ],
+    "points_forts": [
+      "Aspect naturel impeccable",
+      "Longue durée"
+    ],
+    "nouveau": true,
+    "stock_total": 17,
+    "en_stock": true,
+    "note": { "moyenne": 4.7, "nombre": 18 },
+    "avis": [
+      { "utilisateur": "Sophie D.", "note": 5, "commentaire": "Très bonne qualité et facile à coiffer.", "date": "2025-06-20" }
+    ],
+    "createdAt": "2025-06-02T10:00:00.000Z",
+    "updatedAt": "2025-06-25T10:00:00.000Z"
+},
+{
+    "_id": "prod_21",
+    "name": "Closure Dentelle 5x5 Bouclée Naturelle",
+    "slug": "closure-dentelle-5x5-bouclee-naturelle",
+    "images": [
+      "http://localhost:4000/images/closure5x5-bouclee1.png",
+      "http://localhost:4000/images/closure5x5-bouclee2.png"
+    ],
+    "description": "Closure dentelle 5x5 avec cheveux Remy bouclés, parfait pour un look naturel et volumineux.",
+    "categorie": {
+      "principale": "Closure",
+      "sous_categories": [
+        { "name": "Closures", "slug": "closures", "imageUrl": "http://localhost:4000/images/closures.png" }
+      ]
+    },
+    "tags": ["closure", "dentelle", "bouclée", "remy", "naturel"],
+    "options_de_couleur": ["noir naturel", "ombré foncé"],
+    "devise": "FCFA",
+    "variants": [
+      { "taille": "5x5", "couleur": "noir naturel", "prix": 60000, "ancien_prix": 75000, "stock": 8 },
+      { "taille": "5x5", "couleur": "ombré foncé", "prix": 63000, "ancien_prix": null, "stock": 6 }
+    ],
+    "details": [
+      "Dentelle premium ultra résistante",
+      "Cheveux 100% naturels Remy",
+      "Texture bouclée naturelle"
+    ],
+    "points_forts": [
+      "Look ultra naturel",
+      "Facile à entretenir"
+    ],
+    "nouveau": true,
+    "stock_total": 14,
+    "en_stock": true,
+    "note": { "moyenne": 4.8, "nombre": 15 },
+    "avis": [
+      { "utilisateur": "Amira S.", "note": 5, "commentaire": "Très belles boucles et durabilité excellente.", "date": "2025-06-21" }
+    ],
+    "createdAt": "2025-06-03T09:00:00.000Z",
+    "updatedAt": "2025-06-25T11:00:00.000Z"
+},
+{
+    "_id": "prod_22",
+    "name": "Closure Dentelle 6x6 Naturelle Ombré",
+    "slug": "closure-dentelle-6x6-naturelle-ombre",
+    "images": [
+      "http://localhost:4000/images/closure6x6-ombre1.png",
+      "http://localhost:4000/images/closure6x6-ombre2.png"
+    ],
+    "description": "Closure 6x6 en dentelle naturelle, cheveux Remy ombré pour un style tendance et naturel.",
+    "categorie": {
+      "principale": "Closure",
+      "sous_categories": [
+        { "name": "Closures", "slug": "closures", "imageUrl": "http://localhost:4000/images/closures.png" },
+        { "name": "Closures", "slug": "closures", "imageUrl": "http://localhost:4000/images/closures.png" }
+      ]
+    },
+    "tags": ["closure", "dentelle", "ombré", "remy", "naturel"],
+    "options_de_couleur": ["ombré clair", "ombré foncé"],
+    "devise": "FCFA",
+    "variants": [
+      { "taille": "6x6", "couleur": "ombré clair", "prix": 70000, "ancien_prix": 85000, "stock": 5 },
+      { "taille": "6x6", "couleur": "ombré foncé", "prix": 73000, "ancien_prix": null, "stock": 4 }
+    ],
+    "details": [
+      "Dentelle de haute qualité",
+      "Cheveux 100% naturels Remy",
+      "Facile à poser et styliser"
+    ],
+    "points_forts": [
+      "Style moderne et naturel",
+      "Durabilité longue"
+    ],
+    "nouveau": true,
+    "stock_total": 9,
+    "en_stock": true,
+    "note": { "moyenne": 4.7, "nombre": 12 },
+    "avis": [
+      { "utilisateur": "Léa M.", "note": 5, "commentaire": "Super qualité et style élégant.", "date": "2025-06-23" }
+    ],
+    "createdAt": "2025-06-04T10:00:00.000Z",
+    "updatedAt": "2025-06-26T12:00:00.000Z"
+}
+
+
 ]

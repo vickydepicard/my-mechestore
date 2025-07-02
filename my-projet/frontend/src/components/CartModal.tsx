@@ -31,15 +31,15 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
         ) : (
           <>
             <div className="space-y-4 flex-1">
-              {cartItems.map((item, index) => (
-                <div key={`${item._id}-${index}`} className="flex items-center gap-4 border rounded-lg p-3">
+              {cartItems.map((item) => (
+                <div key={item._id} className="flex items-center gap-4 border rounded-lg p-3">
                   <img
                     src={item.images?.[0]}
                     alt={item.name}
                     className="w-14 h-14 rounded object-contain bg-gray-100 cursor-pointer"
                     onClick={() => {
                       navigate(`/produit/${item._id}`);
-                      onClose(); // ferme le panier au clic
+                      onClose();
                     }}
                   />
                   <div className="flex-1">
@@ -55,7 +55,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
                     <p className="text-pink-600 font-bold text-sm">{item.price.toFixed(2)} €</p>
                   </div>
                   <button
-                    onClick={() => removeFromCart(index)}
+                    onClick={() => removeFromCart(item._id)}
                     className="text-xs text-red-500 hover:underline"
                   >
                     Supprimer

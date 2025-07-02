@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Mèches & Extensions",
+    "slug": "meches-extensions",
+    "description": "Gamme complète de mèches et extensions capillaires",
+    "items": [
+      {
+        "name": "Mèches lisses",
+        "slug": "meches-lisses",
+        "description": "Mèches capillaires lisses pour divers styles",
+        "metadata": { "displayOrder": 1 }
+      },
+      {
+        "name": "Bundles",
+        "slug": "bundles",
+        "description": "Bundles de mèches pour des coiffures volumineuses",
+        "metadata": { "displayOrder": 2 }
+      },
+      {
+        "name": "Packs",
+        "slug": "packs",
+        "description": "Packs combinés de mèches et accessoires",
+        "metadata": { "displayOrder": 3 }
+      }
+    ],
+    "metadata": { "displayOrder": 1, "isActive": true }
+  },
+  {
+    "name": "Closures & Frontals",
+    "slug": "closures-frontals",
+    "description": "Closures 4×4 ou 5×5, frontals 13×4, 18×4, etc.",
+    "items": [
+      { "name": "Closure 4×4", "slug": "closure-4x4", "metadata": { "displayOrder": 1 } },
+      { "name": "Closure 5×5", "slug": "closure-5x5", "metadata": { "displayOrder": 2 } },
+      { "name": "Frontal 13×4", "slug": "frontal-13x4", "metadata": { "displayOrder": 3 } },
+      { "name": "Frontal 18×4", "slug": "frontal-18x4", "metadata": { "displayOrder": 4 } }
+    ],
+    "metadata": { "displayOrder": 3, "isActive": true }
+  },
+  {
+    "name": "Produits capillaires",
+    "slug": "produits-capillaires",
+    "description": "Shampoings, après‑shampoings, gels, huiles, soins, masques",
+    "items": [
+      { "name": "Shampoings", "slug": "shampoings", "metadata": { "displayOrder": 1 } },
+      { "name": "Après-shampoings", "slug": "apres-shampoings", "metadata": { "displayOrder": 2 } },
+      { "name": "Gel fixant", "slug": "gel-fixant", "metadata": { "displayOrder": 3 } },
+      { "name": "Masques capillaires", "slug": "masques-capillaires", "metadata": { "displayOrder": 4 } },
+      { "name": "Huiles nourrissantes", "slug": "huiles-nourrissantes", "metadata": { "displayOrder": 5 } }
+    ],
+    "metadata": { "displayOrder": 4, "isActive": true }
+  },
+  {
+    "name": "Accessoires",
+    "slug": "accessoires",
+    "description": "Brosses, pinces, bonnets, bonnets de nuit, bonnet satin",
+    "items": [
+      { "name": "Brosses", "slug": "brosses", "metadata": { "displayOrder": 1 } },
+      { "name": "Pinces", "slug": "pinces", "metadata": { "displayOrder": 2 } },
+      { "name": "Bonnets de nuit", "slug": "bonnets-de-nuit", "metadata": { "displayOrder": 3 } },
+      { "name": "Bonnet satin", "slug": "bonnet-satin", "metadata": { "displayOrder": 4 } }
+    ],
+    "metadata": { "displayOrder": 5, "isActive": true }
+  }
+]

@@ -3,6 +3,7 @@ import cors from 'cors'
 
 import bookRouter from './routes/book.route'
 import productRoutes from './routes/productRoutes';
+import categoriesRouter from './routes/categories';
 
 const app = express()
 const router = express.Router();
@@ -21,5 +22,9 @@ app.get('/', (req, res) => {
 
 // API produits
 app.use('/api/products', productRoutes);
+
+
+app.use('/api/categories', categoriesRouter);
+
 
 export default app

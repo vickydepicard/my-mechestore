@@ -22,5 +22,41 @@
     "name": "Perruque Lace Frontal 26 pouces",
     "image": "http://localhost:4000/images/lace.png",
     "price": 95
+  },
+    {
+    "_id": "prod_4",
+    "name": "Perruque Lace Frontal 26 pouces",
+    "image": "http://localhost:4000/images/lace.png",
+    "price": 95
+  },
+    {
+    "_id": "prod_5",
+    "name": "Perruque Lace Frontal 26 pouces",
+    "image": "http://localhost:4000/images/lace.png",
+    "price": 95
+  },
+    {
+    "_id": "prod_6",
+    "name": "Perruque Lace Frontal 26 pouces",
+    "image": "http://localhost:4000/images/lace.png",
+    "price": 95
+  },
+    {
+    "_id": "prod_7",
+    "name": "Perruque Lace Frontal 26 pouces",
+    "image": "http://localhost:4000/images/lace.png",
+    "price": 95
+  },
+    {
+    "_id": "prod_8",
+    "name": "Perruque Lace Frontal 26 pouces",
+    "image": "http://localhost:4000/images/lace.png",
+    "price": 95
+  },
+    {
+    "_id": "prod_9",
+    "name": "Perruque Lace Frontal 26 pouces",
+    "image": "http://localhost:4000/images/lace.png",
+    "price": 95
   }
 ]

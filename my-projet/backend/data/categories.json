@@ -1,0 +1,193 @@
+[
+  {
+    "name": "Mèches & Extensions",
+    "slug": "meches-extensions",
+    "description": "Tous nos modèles de mèches et extensions naturelles pour des looks variés et professionnels.",
+    "items": [
+      {
+        "name": "Mèches lisses",
+        "slug": "meches-lisses",
+        "description": "Mèches naturelles lisses pour des styles élégants et sobres.",
+        "metadata": { "displayOrder": 1 }
+      },
+      {
+        "name": "Mèches bouclées",
+        "slug": "meches-bouclees",
+        "description": "Mèches naturelles ondulées ou bouclées pour plus de volume et de style.",
+        "metadata": { "displayOrder": 2 }
+      },
+      {
+        "name": "Mèches kinky curly",
+        "slug": "meches-kinky-curly",
+        "description": "Texture afro naturelle, idéale pour un volume extrême et un effet naturel.",
+        "metadata": { "displayOrder": 3 }
+      },
+      {
+        "name": "Tissages",
+        "slug": "tissages",
+        "description": "Tissages Remy Hair haut de gamme pour des coiffures durables et naturelles.",
+        "metadata": { "displayOrder": 4 }
+      },
+      {
+        "name": "Bundles",
+        "slug": "bundles",
+        "description": "Lots économiques de mèches pour des coiffures complètes.",
+        "metadata": { "displayOrder": 5 }
+      },
+      {
+        "name": "Packs",
+        "slug": "packs",
+        "description": "Packs combinant mèches et closures pour un résultat professionnel.",
+        "metadata": { "displayOrder": 6 }
+      }
+    ],
+    "metadata": { "displayOrder": 1, "isActive": true }
+  },
+
+  {
+    "name": "Frontal",
+    "slug": "frontal",
+    "description": "Frontals haut de gamme pour des finitions invisibles et naturelles.",
+    "items": [
+      {
+        "name": "Frontals 13x4",
+        "slug": "frontals-13x4",
+        "description": "Frontal 13x4 avec baby hair, finition impeccable.",
+        "metadata": { "displayOrder": 1 }
+      },
+      {
+        "name": "Frontals 13x6",
+        "slug": "frontals-13x6",
+        "description": "Frontal 13x6 avec plus de profondeur pour des raies variées.",
+        "metadata": { "displayOrder": 2 }
+      },
+      {
+        "name": "Frontals HD Lace",
+        "slug": "frontals-hd-lace",
+        "description": "Frontals en dentelle HD ultra-transparente.",
+        "metadata": { "displayOrder": 3 }
+      }
+    ],
+    "metadata": { "displayOrder": 2, "isActive": true }
+  },
+
+  {
+    "name": "Closure",
+    "slug": "closure",
+    "description": "Closures en dentelle pour une finition naturelle et discrète de vos coiffures.",
+    "items": [
+      {
+        "name": "Closures 4x4",
+        "slug": "closures-4x4",
+        "description": "Closure classique 4x4 facile à poser.",
+        "metadata": { "displayOrder": 1 }
+      },
+      {
+        "name": "Closures 5x5",
+        "slug": "closures-5x5",
+        "description": "Plus large pour une raie plus naturelle.",
+        "metadata": { "displayOrder": 2 }
+      },
+      {
+        "name": "Closures HD Lace",
+        "slug": "closures-hd-lace",
+        "description": "Dentelle HD ultra-transparente et indétectable.",
+        "metadata": { "displayOrder": 3 }
+      }
+    ],
+    "metadata": { "displayOrder": 3, "isActive": true }
+  },
+
+  {
+    "name": "Perruques",
+    "slug": "perruques",
+    "description": "Large choix de perruques prêtes-à-porter pour tous les styles.",
+    "items": [
+      {
+        "name": "Lace Front",
+        "slug": "lace-front",
+        "description": "Perruques avec lace front pour un rendu naturel.",
+        "metadata": { "displayOrder": 1 }
+      },
+      {
+        "name": "Full Lace",
+        "slug": "full-lace",
+        "description": "Perruques entièrement en dentelle pour un maximum de flexibilité.",
+        "metadata": { "displayOrder": 2 }
+      },
+      {
+        "name": "360 Lace",
+        "slug": "360-lace",
+        "description": "Dentelle tout autour pour attacher vos cheveux en queue de cheval.",
+        "metadata": { "displayOrder": 3 }
+      },
+      {
+        "name": "Bob",
+        "slug": "bob",
+        "description": "Perruques bob courtes et stylées.",
+        "metadata": { "displayOrder": 4 }
+      }
+    ],
+    "metadata": { "displayOrder": 4, "isActive": true }
+  },
+
+  {
+    "name": "Accessoires",
+    "slug": "accessoires",
+    "description": "Tout le nécessaire pour entretenir et personnaliser vos mèches et perruques.",
+    "items": [
+      {
+        "name": "Bonnets",
+        "slug": "bonnets",
+        "description": "Bonnets pour protéger vos cheveux naturels ou vos perruques.",
+        "metadata": { "displayOrder": 1 }
+      },
+      {
+        "name": "Peignes et Brosses",
+        "slug": "peignes-brosses",
+        "description": "Outils adaptés pour coiffer et entretenir vos extensions.",
+        "metadata": { "displayOrder": 2 }
+      },
+      {
+        "name": "Colles et Adhesifs",
+        "slug": "colles-adhesifs",
+        "description": "Colles, bandes adhésives et fixateurs spéciaux.",
+        "metadata": { "displayOrder": 3 }
+      }
+    ],
+    "metadata": { "displayOrder": 5, "isActive": true }
+  },
+
+  {
+    "name": "Produits d’entretien",
+    "slug": "produits-entretien",
+    "description": "Tout pour prendre soin de vos cheveux naturels et de vos extensions.",
+    "items": [
+      {
+        "name": "Shampoings",
+        "slug": "shampoings",
+        "description": "Nettoyage doux et nourrissant pour cheveux naturels ou Remy Hair.",
+        "metadata": { "displayOrder": 1 }
+      },
+      {
+        "name": "Après-shampoings",
+        "slug": "apres-shampoings",
+        "description": "Hydratation et démêlage en douceur.",
+        "metadata": { "displayOrder": 2 }
+      },
+      {
+        "name": "Sérums et Huiles",
+        "slug": "serums-huiles",
+        "description": "Soins intensifs pour nourrir et protéger.",
+        "metadata": { "displayOrder": 3 }
+      },
+      {
+        "name": "Mousses et Gels",
+        "slug": "mousses-gels",
+        "description": "Pour définir les boucles ou plaquer les baby hair.",
+        "metadata": { "displayOrder": 4 }
+      }
+    ],
+    "metadata": { "displayOrder": 6, "isActive": true }
+  }
+]

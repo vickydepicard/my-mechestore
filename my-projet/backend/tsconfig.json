@@ -5,6 +5,7 @@
     "rootDir": ".",
     "outDir": "./dist",
     "strict": true,
+    "resolveJsonModule": true,  
     "moduleResolution": "node",
     "esModuleInterop": true,           // ou "esnext" si tu cibles ES modules
     "allowJs": true,

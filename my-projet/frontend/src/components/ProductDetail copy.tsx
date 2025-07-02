@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 import { useCart } from '../components/CartContext'
 
 type Variant = {
-  longueur: string
-  couleur: string
-  prix: number
-  ancien_prix?: number
+  length: string
+  color: string
+  price: number
+  oldPrice?: number
   stock: number
 }
 
@@ -18,8 +18,8 @@ type Product = {
   description: string
   variants: Variant[]
   details: string[]
-  note?: { moyenne: number; nombre: number }
-  nouveau?: boolean
+  rating: { average: number; count: number }
+  isNew: boolean
 }
 
 export default function ProductDetail() {
@@ -41,8 +41,8 @@ export default function ProductDetail() {
       })
       .then((data: Product) => {
         setProduct(data)
-        setSelectedLength(data.variants[0]?.longueur ?? null)
-        setSelectedColor(data.variants[0]?.couleur ?? null)
+        setSelectedLength(data.variants[0]?.length ?? null)
+        setSelectedColor(data.variants[0]?.color ?? null)
         setMainImage(data.images[0])
       })
       .catch(() => setError('Impossible de charger le produit'))
@@ -51,9 +51,9 @@ export default function ProductDetail() {
   if (error) return <p className="py-10 text-center text-red-500">{error}</p>
   if (!product) return <p className="py-10 text-center">Chargement du produit…</p>
 
-  const lengths = Array.from(new Set(product.variants.map(v => v.longueur)))
-  const colorsForLength = Array.from(new Set(product.variants.filter(v => v.longueur === selectedLength).map(v => v.couleur)))
-  const selectedVariant = product.variants.find(v => v.longueur === selectedLength && v.couleur === selectedColor)
+  const lengths = Array.from(new Set(product.variants.map(v => v.length)))
+  const colorsForLength = Array.from(new Set(product.variants.filter(v => v.length === selectedLength).map(v => v.color)))
+  const selectedVariant = product.variants.find(v => v.length === selectedLength && v.color === selectedColor)
   const visitors = Math.floor(Math.random() * 10) + 5
   const formatXOF = (amt: number) => amt.toLocaleString('fr-FR') + ' FCFA'
 
@@ -61,9 +61,9 @@ export default function ProductDetail() {
     <div className="max-w-5xl mx-auto py-12 px-4 grid md:grid-cols-2 gap-10">
       {/* Galerie */}
       <div className="space-y-4">
-        <div className="relative w-full h-290 overflow-hidden rounded-lg shadow-lg">
+        <div className="relative w-full h-96 overflow-hidden rounded-lg shadow-lg">
           <img
-            src={mainImage ?? ''}
+            src={mainImage!}
             alt={product.name}
             className="w-full h-full object-cover transition-opacity duration-500 ease-in-out"
             key={mainImage}
@@ -74,7 +74,9 @@ export default function ProductDetail() {
             <li key={idx}>
               <button
                 onClick={() => setMainImage(img)}
-                className={`w-20 h-20 rounded-lg overflow-hidden border-2 ${mainImage === img ? 'border-pink-600' : 'border-transparent'} focus:outline-none transition-transform transform hover:scale-105`}
+                className={`w-20 h-20 rounded-lg overflow-hidden border-2 ${
+                  mainImage === img ? 'border-pink-600' : 'border-transparent'
+                } focus:outline-none transition-transform transform hover:scale-105`}
               >
                 <img src={img} alt={`Aperçu ${idx + 1}`} className="w-full h-full object-cover" />
               </button>
@@ -85,27 +87,27 @@ export default function ProductDetail() {
 
       {/* Infos & sélection */}
       <div>
-        {product.nouveau && <span className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-2 py-1 rounded-full">Nouveau</span>}
+        {product.isNew && <span className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-2 py-1 rounded-full">Nouveau</span>}
         <h1 className="text-4xl font-bold uppercase mt-2">{product.name}</h1>
 
         <div className="flex items-center gap-2 mt-2">
-          {Array.from({ length: Math.floor(product.note?.moyenne || 0) }).map((_, i) => (
+          {Array.from({ length: Math.floor(product.rating.average) }).map((_, i) => (
             <span key={i} className="text-yellow-500">★</span>
           ))}
-          {product.note?.nombre ? <span className="text-sm text-gray-600">({product.note.nombre} avis)</span> : null}
+          {product.rating.count > 0 && <span className="text-sm text-gray-600">({product.rating.count} avis)</span>}
         </div>
 
         <div className="mt-4 flex items-baseline gap-4">
-          {selectedVariant?.ancien_prix !== undefined && selectedVariant.ancien_prix > selectedVariant.prix && (
+          {selectedVariant?.oldPrice !== undefined && (
             <>
-              <span className="text-xl text-gray-500 line-through">{formatXOF(selectedVariant.ancien_prix)}</span>
+              <span className="text-xl text-gray-500 line-through">{formatXOF(selectedVariant.oldPrice)}</span>
               <span className="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
-                Économisez {formatXOF(selectedVariant.ancien_prix - selectedVariant.prix)}
+                Économisez {formatXOF(selectedVariant.oldPrice - selectedVariant.price)}
               </span>
             </>
           )}
           <span className="text-3xl font-bold text-pink-600">
-            {selectedVariant ? formatXOF(selectedVariant.prix * quantity) : '– FCFA'}
+            {selectedVariant ? formatXOF(selectedVariant.price * quantity) : '– FCFA'}
           </span>
         </div>
 
@@ -113,20 +115,22 @@ export default function ProductDetail() {
 
         {/* Sélection Longueur + Couleur */}
         <div className="mt-6 grid grid-cols-2 gap-x-4">
+          {/* Longueur */}
           <div>
             <label className="block text-sm font-medium text-gray-700">Longueur</label>
             <select
-              value={selectedLength ?? ''}
+              value={selectedLength!}
               onChange={e => {
                 const len = e.target.value
                 setSelectedLength(len)
-                setSelectedColor(product.variants.find(v => v.longueur === len)?.couleur ?? null)
+                setSelectedColor(product.variants.find(v => v.length === len)!.color)
               }}
               className="mt-1 block w-full rounded-md border-gray-300 p-2 focus:border-pink-600"
             >
               {lengths.map(len => <option key={len}>{len}</option>)}
             </select>
           </div>
+          {/* Couleur */}
           <div>
             <label className="block text-sm font-medium text-gray-700">Couleur</label>
             <div className="mt-1 flex items-center space-x-2">
@@ -135,9 +139,10 @@ export default function ProductDetail() {
                   key={color}
                   type="button"
                   onClick={() => setSelectedColor(color)}
-                  className={`w-8 h-8 rounded-full border-2 ${selectedColor === color ? 'border-pink-600' : 'border-gray-300'} transform transition-transform hover:scale-110`}
+                  className={`w-8 h-8 rounded-full border-2 ${
+                    selectedColor === color ? 'border-pink-600' : 'border-gray-300'
+                  } transform transition-transform hover:scale-110`}
                   style={{ backgroundColor: color }}
-                  title={color}
                 />
               ))}
             </div>
@@ -149,22 +154,30 @@ export default function ProductDetail() {
           <div>
             <label className="block text-sm font-medium text-gray-700">Quantité</label>
             <div className="mt-1 flex rounded-md border border-gray-300 overflow-hidden">
-              <button onClick={() => setQuantity(q => Math.max(1, q - 1))} className="px-3 bg-white hover:bg-gray-50">–</button>
+              <button
+                onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                className="px-3 bg-white hover:bg-gray-50"
+              >–</button>
               <input
                 type="number"
                 value={quantity}
                 min={1}
                 max={selectedVariant?.stock || 1}
-                onChange={e => setQuantity(Math.max(1, Math.min(selectedVariant?.stock || 1, +e.target.value || 1)))}
+                onChange={e => setQuantity(Math.max(1, Math.min(selectedVariant!.stock, +e.target.value || 1)))}
                 className="w-16 text-center focus:outline-none"
               />
-              <button onClick={() => setQuantity(q => Math.min(selectedVariant?.stock || 1, q + 1))} className="px-3 bg-white hover:bg-gray-50">+</button>
+              <button
+                onClick={() => setQuantity(q => Math.min(selectedVariant!.stock, q + 1))}
+                className="px-3 bg-white hover:bg-gray-50"
+              >+</button>
             </div>
           </div>
           <button
-            onClick={() => selectedVariant && addToCart({ ...product, price: selectedVariant.prix, quantity })}
+            onClick={() => selectedVariant && addToCart({ ...product, price: selectedVariant.price, quantity })}
             disabled={!selectedVariant || selectedVariant.stock === 0}
-            className={`inline-block bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition ${(!selectedVariant || selectedVariant.stock === 0) && 'opacity-50 cursor-not-allowed'}`}
+            className={`inline-block bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition ${
+              (!selectedVariant || selectedVariant.stock === 0) && 'opacity-50 cursor-not-allowed'
+            }`}
           >
             Ajouter au panier
           </button>

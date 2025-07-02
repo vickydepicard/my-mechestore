@@ -1,52 +1,83 @@
-import express from 'express'; // ✅ Tu dois importer express ici
+import express from 'express';
 import fs from 'fs';
 import path from 'path';
 import app from './app';
 
+import categories from './data/categories.json';
+import products from './data/products.json';
+import categoriesRoutes from './routes/categories'; // ✅ Nouveau
+
+interface Category {
+  name: string;
+  slug: string;
+  items?: {
+    name: string;
+    slug: string;
+  }[];
+}
+
 interface Product {
   _id: string;
   name: string;
-  image: string;
-  price: number;
-  sales?: number; // `sales` est optionnel pour les new-arrivals
+  image?: string;
+  images?: string[];
+  price?: number;
+  sales?: number;
+  category?: string;
 }
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 
-// ⚠️ Sert le dossier images/ de manière publique
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-// ✅ Meilleures ventes
+// ✅ Routes dynamiques : filtrage par slug
+app.use('/api/categories', categoriesRoutes); // <-- ✅ À ajouter ici
+
+app.use('/api/categories', require('./routes/categories').default);
+
+import categoriesRouter from './routes/categories';
+
+app.use('/api/categories', categoriesRouter);
+
+import productSubcatsRouter from './routes/productSubcats';
+app.use('/api', productSubcatsRouter);
+
+
+
+// ✅ Route de toutes les catégories brutes
+app.get('/api/categories-old', (req, res) => {
+  res.json(categories);
+});
+
 app.get('/api/products/best-sellers', (req, res) => {
-  console.log('🔁 Request best-sellers received');
-  const filePath = path.join(__dirname, 'data', 'products.json');
-
-  try {
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    const products: Product[] = JSON.parse(raw);
-    const sorted = products.sort((a, b) => (b.sales ?? 0) - (a.sales ?? 0)).slice(0, 10);
-    console.log(`➡️ Returning ${sorted.length} products`);
-    res.json(sorted);
-  } catch (err: any) {
-    console.error('🔥 Error reading products.json:', err);
-    res.status(500).json({ error: err.message });
-  }
+  const all = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'products.json'), 'utf8'));
+  const sorted = (all as Product[]).sort((a, b) => (b.sales ?? 0) - (a.sales ?? 0)).slice(0, 10);
+  res.json(sorted);
 });
 
-// ✅ Nouveautés
 app.get('/api/products/new-arrivals', (req, res) => {
-  console.log('🔁 Request new-arrivals received');
-  const filePath = path.join(__dirname, 'data', 'new-arrivals.json');
+  const arr = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'new-arrivals.json'), 'utf8'));
+  res.json(arr);
+});
 
-  try {
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    const products: Product[] = JSON.parse(raw);
-    console.log(`➡️ Returning ${products.length} new arrivals`);
-    res.json(products);
-  } catch (err: any) {
-    console.error('🔥 Error reading new-arrivals.json:', err);
-    res.status(500).json({ error: err.message });
+app.get('/api/products', (req, res) => {
+  const all = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'products.json'), 'utf8')) as Product[];
+  const cat = req.query.category as string | undefined;
+
+  if (cat) {
+    const filtered = all.filter(p => p.category === cat);
+    return res.json(filtered);
+  }
+  res.json(all);
+});
+
+const slugs = new Set((categories as Category[]).map((c) => c.slug));
+(products as Product[]).forEach((p) => {
+  if (p.category && !slugs.has(p.category)) {
+    console.warn(`⚠️ Produit ${p._id} a une catégorie inconnue : "${p.category}"`);
   }
 });
 
-app.listen(port, () => console.log(`🚀 App listening at http://localhost:${port}`));
+app.listen(port, () => {
+  console.log(`🚀 Serveur lancé sur : http://localhost:${port}`);
+});
