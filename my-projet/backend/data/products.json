@@ -5,7 +5,143 @@
   "slug": "lot-3-meches-lisses-bresiliennes",
   "images": [
     "http://localhost:4000/images/meche-lisse/lisse.png",
-    "http://localhost:4000/images/meche-lisse/image.png",
+    "http://localhost:4000/images/meche-lisse/image1.png",
+    "http://localhost:4000/images/meche-lisse/image1.png",
+    "http://localhost:4000/images/meche-lisse/meches-naturelles-lot.png"
+  ],
+  "description": "Lot de 3 mèches naturelles brésiliennes lisses, soyeuses et résistantes, parfait pour un look élégant.",
+  "categorie": {
+    "principale": "Mèches & Extensions",
+    "sous_categories": [
+      {
+        "name": "Mèches lisses",
+        "slug": "meches-lisses",
+        "imageUrl": "http://localhost:4000/images/meche-lisse/bresilien.png"
+      },
+      {
+        "name": "Bundles",
+        "slug": "bundles",
+        "imageUrl": "http://localhost:4000/images/bundles.jpg"
+      }
+    ]
+  },
+  "tags": ["remy hair", "brésilien", "cheveux naturels", "lisses"],
+  "options_de_couleur": ["#4B3621", "chocolat", "blond cendré", "ombré"],
+  "devise": "FCFA",
+  "variants": [
+    {
+      "longueur": "10\"",
+      "couleur": "#B98A68",
+      "prix": 65000,
+      "ancien_prix": 85000,
+      "stock": 0,
+      "promo_active": true
+    },
+    {
+      "longueur": "12\"",
+      "couleur": "#3B2E25",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6,
+      "promo_active": true
+    },
+    {
+      "longueur": "14\"",
+      "couleur": "#101820",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6,
+      "promo_active": true
+    },
+    {
+      "longueur": "16\"",
+      "couleur": "#ECEBE6",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6,
+      "promo_active": false
+    },
+    {
+      "longueur": "18\"",
+      "couleur": "#B1B1B1",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6,
+      "promo_active": false
+    },
+    {
+      "longueur": "20\"",
+      "couleur": "#6D2C35",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6,
+      "promo_active": false
+    },
+    {
+      "longueur": "26\"",
+      "couleur": "#4B3621",
+      "prix": 110000,
+      "ancien_prix": 130000,
+      "stock": 6,
+      "promo_active": false
+    },
+    {
+      "longueur": "30\"",
+      "couleur": "#E8A0B9",
+      "prix": 130000,
+      "ancien_prix": null,
+      "stock": 3,
+      "promo_active": false
+    }
+  ],
+  "promotion": {
+    "active": true,
+    "nom": "Offre spéciale été",
+    "description": "Profitez jusqu'à -20% sur nos mèches lisses brésiliennes.",
+    "date_debut": "2025-07-20T00:00:00.000Z",
+    "date_fin": "2025-08-10T23:59:59.000Z",
+    "couleur_badge": "#E91E63",
+    "badge_texte": "-20%",
+    "produits_concernes": ["prod_1"]
+  },
+  "details": [
+    "Cheveux 100% naturels Remy Hair 9A+",
+    "Peut être coloré, coiffé et lissé"
+  ],
+  "points_forts": ["Livraison offerte dès 35€", "Paiement sécurisé CB/PayPal"],
+  "nouveau": false,
+  "stock_total": 21,
+  "en_stock": true,
+  "note": {
+    "moyenne": 4.7,
+    "nombre": 7
+  },
+  "avis": [
+    {
+      "utilisateur": "Awa N.",
+      "note": 5,
+      "commentaire": "Très belle qualité, cheveux doux et brillants.",
+      "date": "2025-06-10"
+    },
+    {
+      "utilisateur": "Mamadou S.",
+      "note": 4,
+      "commentaire": "Bon rapport qualité-prix.",
+      "date": "2025-06-15"
+    }
+  ],
+  "createdAt": "2025-05-28T08:00:00.000Z",
+  "updatedAt": "2025-06-20T14:00:00.000Z"
+}
+,
+
+{
+  "_id": "prod_555",
+  "name": "Lot 3 Mèches Lisses Brésiliennes",
+  "slug": "lot-3-meches-lisses-bresiliennes",
+  "images": [
+    "http://localhost:4000/images/meche-lisse/lisse.png",
+    "http://localhost:4000/images/meche-lisse/image1.png",
     "http://localhost:4000/images/meche-lisse/image1.png",
     "http://localhost:4000/images/meche-lisse/meches-naturelles-lot.png"
   ],
@@ -21,7 +157,7 @@
   "options_de_couleur": ["#4B3621", "chocolat", "blond cendré", "ombré"],
   "devise": "FCFA",
   "variants": [
-    { "longueur": "10\"", "couleur": "#B98A68", "prix": 65000,  "ancien_prix": 85000,  "stock": 8 },
+    { "longueur": "10\"", "couleur": "#B98A68", "prix": 65000,  "ancien_prix": 85000,  "stock": 0 },
     { "longueur": "12\"", "couleur": "#3B2E25", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
     { "longueur": "14\"", "couleur": "#101820", "prix": 110000, "ancien_prix": 130000, "stock": 6 },
     { "longueur": "16\"", "couleur": "#ECEBE6", "prix": 110000, "ancien_prix": 130000, "stock": 6 },

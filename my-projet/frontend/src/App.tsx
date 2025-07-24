@@ -16,12 +16,25 @@ import BlogPreview from "./components/BlogPreview";
 import InstagramCTA from "./components/InstagramCTA";
 import SubcategoryPage from './components/SubcategoryPage';
 import SubcategoryProductsPage from './components/SubcategoryProductsPage'
+import categories from '../../backend/data/categories.json';
+import promoProd from '../../backend/data/promoProduct.json';
+import TopCategoriesSection from './components/TopCategoriesSection';
+import PromotionalBanner from './components/PromotionalBanner';
+import TopSelectionFilter from './components/TopSelectionFilter'; // ✅ Import ajouté
 
 function Home() {
+  const filters = ['Nouveautés', 'Meilleures ventes', 'Tendance', 'Promotions']; // ✅ Liste des filtres
+
+  const handleFilterChange = (filter: string) => {
+    console.log("Filtre sélectionné :", filter); // ✅ Action au clic
+  };
+
   return (
     <>
+      <PromotionalBanner />
       <HeroSlider />
-      <BestSellerSlider />
+      <TopCategoriesSection categories={categories} />
+      <TopSelectionFilter filters={filters} onFilterChange={handleFilterChange} /> {/* ✅ Ajout ici */}
       <NewArrivalsSlider />
       <USPs />
       <BlogPreview />
@@ -37,23 +50,10 @@ function App() {
         <Header />
 
         <Routes>
-          {/* Accueil */}
           <Route path="/" element={<Home />} />
-
-          {/* Détail produit */}
           <Route path="/produit/:id" element={<ProductDetail />} />
-
-          {/* Page des sous-catégories pour une catégorie donnée */}
           <Route path="/category/:categorySlug" element={<CategoryPage />} />
-
-          {/* Page listant les produits d’une sous-catégorie */}
-          <Route
-            path="/category/:categorySlug/:itemSlug"
-            element={<SubcategoryProductsPage />}
-          />
-
-          {/* Page 404 si besoin */}
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="/category/:categorySlug/:itemSlug" element={<SubcategoryProductsPage />} />
         </Routes>
 
         <Footer />

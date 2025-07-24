@@ -1,0 +1,9 @@
+{
+  "name": "Lot 3 Mèches Lisses Brésiliennes",
+  "images": ["http://.../lisse.png"],
+  "price": 65000,
+  "oldPrice": 85000,
+  "promoCode": "FC3D",
+  "minAmount": 7000,
+  "link": "/produit/lot-3-meches-lisses-bresiliennes"
+}
