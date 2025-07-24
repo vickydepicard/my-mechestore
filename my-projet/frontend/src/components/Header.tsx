@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FiShoppingCart, FiMenu, FiX, FiSearch, FiChevronDown } from 'react-icons/fi';
 import { CartContext } from './CartContext';
 import CartModal from './CartModal';
+import logo from '../assets/images/logo.png';
 
 interface Category { name: string; slug: string; }
 interface Subcat { parent: string; parentSlug: string; name: string; slug: string; }
@@ -64,7 +65,7 @@ export default function Header() {
 
         <nav className="bg-pink-500 text-white flex items-center justify-between px-4 md:px-12 py-3">
           <Link to="/" className="flex-shrink-0">
-            <img src="/logo.png" alt="Logo" className="h-12 mx-auto" />
+            <img src={logo} alt="Logo" className="h-12 object-contain mx-auto md:mx-0" />
           </Link>
 
           <ul className="hidden md:flex space-x-6 text-base font-medium">
