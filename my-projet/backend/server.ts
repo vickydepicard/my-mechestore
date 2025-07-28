@@ -9,6 +9,10 @@ import products from './data/products.json';
 import categoriesRouter from './routes/categories';
 import productSubcatsRouter from './routes/productSubcats';
 
+import ordersRoutes from './routes/orders';
+
+import authRoutes from './routes/auth';
+
 interface Category {
   name: string;
   slug: string;
@@ -86,7 +90,10 @@ app.get('/api/promotions', (req, res) => {
     new Date(prod.promotion.date_fin) >= new Date()
   );
   res.json(produitsEnPromo);
-});
+});// 👇 Route pour les commandes
+app.use('/api/orders', ordersRoutes);
+
+app.use('/api/auth', authRoutes);
 
 // 🛑 Validation : Alerte si une catégorie est invalide
 const slugs = new Set((categories as Category[]).map((c) => c.slug));

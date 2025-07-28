@@ -77,11 +77,16 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
                 Vider le panier
               </button>
 
-              <button
-                className="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg text-sm font-semibold transition"
-              >
-                Commander
-              </button>
+<button
+  onClick={() => {
+    onClose(); // Ferme le panier
+    navigate("/checkout"); // Redirection vers la page de checkout
+  }}
+  className="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-lg text-sm font-semibold transition"
+>
+  Commander
+</button>
+
             </div>
           </>
         )}

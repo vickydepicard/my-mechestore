@@ -21,6 +21,14 @@ import promoProd from '../../backend/data/promoProduct.json';
 import TopCategoriesSection from './components/TopCategoriesSection';
 import PromotionalBanner from './components/PromotionalBanner';
 import TopSelectionFilter from './components/TopSelectionFilter'; // ✅ Import ajouté
+import Checkout from './components/Checkout'; // ou './pages/Checkout'
+import PaymentPage from './components/PaymentPage';
+import InvoicePage from './components/InvoicePage';
+import Register from './components/pages/connect/Register'
+import Login from './components/pages/connect/Login'
+import Account from './components/pages/connect/Account';
+import PrivateRoute from './components/pages/connect/PrivateRoute'; // ✅ Import
+
 
 function Home() {
   const filters = ['Nouveautés', 'Meilleures ventes', 'Tendance', 'Promotions']; // ✅ Liste des filtres
@@ -54,6 +62,17 @@ function App() {
           <Route path="/produit/:id" element={<ProductDetail />} />
           <Route path="/category/:categorySlug" element={<CategoryPage />} />
           <Route path="/category/:categorySlug/:itemSlug" element={<SubcategoryProductsPage />} />
+          <Route path="/checkout" element={<Checkout />} /> {/* ✅ Route ajoutée */}
+          <Route path="/payment/:orderId" element={<PaymentPage />} />
+          <Route path="/invoice/:orderId" element={<InvoicePage />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/account" element={
+  <PrivateRoute>
+    <Account />
+  </PrivateRoute>
+} />
+
         </Routes>
 
         <Footer />
