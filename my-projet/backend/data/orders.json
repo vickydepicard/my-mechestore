@@ -179,5 +179,93 @@
       }
     ],
     "createdAt": "2025-07-28T12:29:24.412Z"
+  },
+  {
+    "orderId": "21c8a7dd-86a3-4065-8ddd-e681cfecc47a",
+    "items": [
+      {
+        "_id": "prod_1",
+        "name": "Mèche Brésilienne 18 pouces",
+        "image": "http://localhost:4000/images/lisse.png",
+        "images": [
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/closure.png"
+        ],
+        "price": 42.5
+      }
+    ],
+    "createdAt": "2025-07-28T13:13:28.895Z"
+  },
+  {
+    "orderId": "4ef90e45-d23b-4dc0-8b72-355284beeda8",
+    "items": [
+      {
+        "_id": "prod_1",
+        "name": "Mèche Brésilienne 18 pouces",
+        "image": "http://localhost:4000/images/lisse.png",
+        "images": [
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/closure.png"
+        ],
+        "price": 42.5
+      }
+    ],
+    "createdAt": "2025-07-28T13:13:43.317Z"
+  },
+  {
+    "orderId": "3edd637e-48e4-4e92-8075-8a88b0f81a74",
+    "items": [
+      {
+        "_id": "prod_1",
+        "name": "Mèche Brésilienne 18 pouces",
+        "image": "http://localhost:4000/images/lisse.png",
+        "images": [
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/lisse.png",
+          "http://localhost:4000/images/closure.png"
+        ],
+        "price": 42.5
+      }
+    ],
+    "createdAt": "2025-07-28T14:20:26.955Z"
+  },
+  {
+    "orderId": "24f56414-0118-4197-991e-adcab8a8d313",
+    "items": [
+      {
+        "id": "prod_1",
+        "name": "Lot 3 Mèches Lisses Brésiliennes",
+        "price": 65000,
+        "image": "http://localhost:4000/images/meche-lisse/lisse.png",
+        "quantity": 1
+      },
+      {
+        "id": "prod_555",
+        "name": "Lot 3 Mèches Lisses Brésiliennes",
+        "price": 65000,
+        "image": "http://localhost:4000/images/meche-lisse/lisse.png",
+        "quantity": 1
+      },
+      {
+        "id": "prod_23",
+        "name": "Tissage bresilien avec closure - Tissage lisse",
+        "price": 65000,
+        "image": "http://localhost:4000/images/meche-lisse/cheveux-Naturels-avec-closure.png",
+        "quantity": 1
+      },
+      {
+        "id": "prod_24",
+        "name": "Extensions de Cheveux Raw Hair Naturels – Qualité Supérieure",
+        "price": 65000,
+        "image": "http://localhost:4000/images/meche-lisse/extensions-de-cheveux-raw-hair-naturels-qualite-superieure.png",
+        "quantity": 1
+      }
+    ],
+    "createdAt": "2025-07-28T14:40:52.264Z"
   }
 ]

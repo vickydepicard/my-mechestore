@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1753711750181,
+    "name": "Vicky Hotio",
+    "email": "vicky@example.com",
+    "password": "$2b$10$k7bXI8g87BEIsThYeK.CZuA0YE.3NfwTdFntoNHNgVY7Dathfp/LS"
+  },
+  {
+    "id": 1753711929872,
+    "name": "test",
+    "email": "tes@gmail.com",
+    "password": "$2b$10$dqYAGByfBaROu1EicDZo0OhJsJA96dvgfY63Dl.j8/JI/d4irYBOO"
+  },
+  {
+    "id": 1753712113386,
+    "name": "test",
+    "email": "test@rr",
+    "password": "$2b$10$DmAPmlgBDMfpESOYqdKthee3sLwo7WQVj7Z4X6nzEwQ0QQGX9Zzp2"
+  },
+  {
+    "id": 1753713574819,
+    "name": "DePicard",
+    "email": "vickyhotio22@gmail.com",
+    "password": "$2b$10$OFFbHYDaKST7FmTe.0nOI.2gdPiqRR3A.1ee5jse3MK5OR3uC7y1a"
+  },
+  {
+    "id": 1753713729437,
+    "name": "MB-TRAVEL",
+    "email": "epauleaepaule@gmail.com",
+    "password": "$2b$10$ZUGK04vkTBTNpoYpVwIv3O/iwCUomozb7Q2rSlo7bvLLUxorVDTKq"
+  }
+]

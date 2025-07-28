@@ -1,4 +1,3 @@
-// src/pages/Register.tsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './authContext';
@@ -23,7 +22,7 @@ const Register = () => {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:4000/api/users/register', {
+      const res = await fetch('http://localhost:4000/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -32,32 +31,34 @@ const Register = () => {
       if (!res.ok) throw new Error('Inscription échouée');
       const userData = await res.json();
 
-      login(userData); // Mémorise l'utilisateur dans le contexte
-      navigate('/account'); // Redirige vers l’espace personnel
+      login(userData); // stocke l’utilisateur
+      navigate('/account'); // redirection tableau de bord
     } catch (err) {
       setError((err as Error).message || 'Erreur');
     }
   };
 
   return (
-    <div className="max-w-md mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4">Créer un compte</h2>
-      {error && <p className="text-red-600 mb-2">{error}</p>}
+    <div className="max-w-md mx-auto p-6 mt-10 bg-white rounded-2xl shadow-lg">
+      <h2 className="text-3xl font-semibold mb-6 text-center">Créer un compte</h2>
+      {error && <p className="text-red-500 text-sm text-center mb-4">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
           name="name"
           placeholder="Nom complet"
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          value={formData.name}
+          className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           required
         />
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Adresse e-mail"
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          value={formData.email}
+          className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           required
         />
         <input
@@ -65,12 +66,13 @@ const Register = () => {
           name="password"
           placeholder="Mot de passe"
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          value={formData.password}
+          className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           required
         />
         <button
           type="submit"
-          className="bg-black text-white w-full p-2 rounded hover:bg-gray-800"
+          className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition duration-200"
         >
           S'inscrire
         </button>
