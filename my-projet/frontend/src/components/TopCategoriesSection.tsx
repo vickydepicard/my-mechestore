@@ -1,5 +1,4 @@
-// src/components/TopCategoriesSection.tsx
-import React from 'react';
+// src/components/TopCate
 import { useNavigate } from 'react-router-dom';
 
 interface Item {

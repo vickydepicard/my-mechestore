@@ -1,6 +1,8 @@
-import React, { useEffect, useState, useContext } from "react";
+// src/components/SubcategoryPage.tsx
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { CartContext } from "./CartContext";
+import { CartContext } from "./CartContext"; // 🔹 CartItem importé depuis types.ts
+import { CartItem } from "./types"; // 🔹 importe directement depuis types.ts
 import ProductModal from "./ProductModal";
 
 interface Product {
@@ -14,14 +16,13 @@ interface Product {
 export default function SubcategoryProductsPage() {
   const { categorySlug, itemSlug } = useParams<{ categorySlug: string; itemSlug: string }>();
   const [items, setItems] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [] = useState(true);
+  const [] = useState<string | null>(null);
   const { addToCart } = useContext(CartContext);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   useEffect(() => {
-    setLoading(true);
-    setError(null);
+
 
     fetch(`/api/categories/${categorySlug}/items/${itemSlug}/products`)
       .then((res) => {
@@ -30,21 +31,26 @@ export default function SubcategoryProductsPage() {
       })
       .then((data: Product[]) => {
         setItems(data);
-        setLoading(false);
       })
       .catch((err) => {
         console.error("Erreur : ", err);
-        setError(err.message);
-        setLoading(false);
+
       });
   }, [categorySlug, itemSlug]);
 
   const openModal = (product: Product) => setSelectedProduct(product);
   const closeModal = () => setSelectedProduct(null);
 
-  if (loading) return <p className="text-center py-10">Chargement…</p>;
-  if (error) return <p className="text-center text-red-500 py-10">Erreur : {error}</p>;
-  if (!items.length) return <p className="text-center py-10">Aucun produit trouvé</p>;
+  const handleAddToCart = (product: Product) => {
+    const cartItem: CartItem = {
+      _id: product._id,
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+      image: product.images[0] || "/placeholder.jpg",
+    };
+    addToCart(cartItem);
+  };
 
   return (
     <section className="py-16 bg-white">
@@ -55,10 +61,7 @@ export default function SubcategoryProductsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
           {items.map((p) => (
-            <div
-              key={p._id}
-              className="bg-white rounded-xl border shadow-sm hover:shadow-lg transition duration-300 flex flex-col"
-            >
+            <div key={p._id} className="bg-white rounded-xl border shadow-sm hover:shadow-lg transition duration-300 flex flex-col">
               <div className="overflow-hidden rounded-t-xl bg-gray-50 flex items-center justify-center p-4">
                 <img
                   src={p.images[0]}
@@ -75,7 +78,7 @@ export default function SubcategoryProductsPage() {
 
                 <div className="mt-4 space-y-2">
                   <button
-                    onClick={() => addToCart(p)}
+                    onClick={() => handleAddToCart(p)}
                     className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-full text-sm font-semibold transition"
                   >
                     Ajouter au panier
@@ -96,7 +99,10 @@ export default function SubcategoryProductsPage() {
           <ProductModal
             isOpen={!!selectedProduct}
             onRequestClose={closeModal}
-            product={selectedProduct}
+            product={{
+              ...selectedProduct,
+              image: [selectedProduct.images[0] || "/placeholder.jpg"], // 🔹 respecte string[]
+            }}
           />
         )}
       </div>

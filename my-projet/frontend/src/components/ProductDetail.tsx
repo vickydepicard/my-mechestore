@@ -161,13 +161,25 @@ export default function ProductDetail() {
               <button onClick={() => setQuantity(q => Math.min(selectedVariant?.stock || 1, q + 1))} className="px-3 bg-white hover:bg-gray-50">+</button>
             </div>
           </div>
-          <button
-            onClick={() => selectedVariant && addToCart({ ...product, price: selectedVariant.prix, quantity })}
-            disabled={!selectedVariant || selectedVariant.stock === 0}
-            className={`inline-block bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition ${(!selectedVariant || selectedVariant.stock === 0) && 'opacity-50 cursor-not-allowed'}`}
-          >
-            Ajouter au panier
-          </button>
+<button
+  onClick={() =>
+    selectedVariant &&
+    addToCart({
+      _id: product._id,
+      name: product.name,
+      price: selectedVariant.prix,
+      quantity,
+      image: product.images[0] || "/placeholder.jpg", // 🔹 image unique pour CartItem
+    })
+  }
+  disabled={!selectedVariant || selectedVariant.stock === 0}
+  className={`inline-block bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition ${
+    (!selectedVariant || selectedVariant.stock === 0) && "opacity-50 cursor-not-allowed"
+  }`}
+>
+  Ajouter au panier
+</button>
+
         </div>
 
         <p className="mt-4 text-gray-600">

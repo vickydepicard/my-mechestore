@@ -1,10 +1,9 @@
 // src/pages/CheckoutPage.tsx
-import React from "react";
 import CheckoutForm from "../../components/CheckoutForm";
-import { useCart } from "../components/CartContext";
+import { useCart } from "../CartContext";
 
 const CheckoutPage = () => {
-  const { cartItems, getTotalPrice } = useCart();
+  const { cartItems, getCartTotal } = useCart(); // 🔹 correction du nom de la fonction
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -21,13 +20,13 @@ const CheckoutPage = () => {
           {cartItems.map((item) => (
             <li key={item._id} className="flex justify-between border-b pb-2">
               <span className="font-medium">{item.name}</span>
-              <span>{item.price} FCFA</span>
+              <span>{item.price.toLocaleString()} FCFA</span>
             </li>
           ))}
         </ul>
         <div className="mt-6 pt-4 border-t flex justify-between font-semibold text-lg">
           <span>Total</span>
-          <span>{getTotalPrice()} FCFA</span>
+          <span>{getCartTotal().toLocaleString()} FCFA</span> {/* 🔹 correction ici aussi */}
         </div>
       </div>
     </div>

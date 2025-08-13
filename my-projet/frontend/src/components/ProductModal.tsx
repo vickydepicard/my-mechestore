@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { CartContext } from "./CartContext";
 
+// Définition du type Product
 interface Product {
-  _id?: string;
+  _id: string;
   name: string;
-  images: string[];
+  image: string[]; // tableau d’images
   price?: number;
   description?: string;
+  quantity?: number;
   variants?: {
     longueur: string;
     couleur: string;
@@ -14,6 +16,7 @@ interface Product {
   }[];
 }
 
+// Définition des props du modal
 interface Props {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -22,12 +25,11 @@ interface Props {
 
 export default function ProductModal({ isOpen, onRequestClose, product }: Props) {
   const { addToCart } = useContext(CartContext);
-  const [currentImage, setCurrentImage] = useState<string>("");
-  const fallbackImage = "/placeholder.jpg";
+  const [currentImage, setCurrentImage] = useState<string>("/placeholder.jpg");
 
   useEffect(() => {
     if (isOpen && product) {
-      setCurrentImage(product.images?.[0] ?? fallbackImage);
+      setCurrentImage(product.image?.[0] ?? "/placeholder.jpg");
     }
   }, [isOpen, product]);
 
@@ -41,9 +43,7 @@ export default function ProductModal({ isOpen, onRequestClose, product }: Props)
       className="fixed z-[1000] inset-0 pointer-events-none flex justify-center items-start mt-20 md:mt-32"
       style={{ backdropFilter: "none" }}
     >
-      <div
-        className="relative w-full max-w-xl bg-white rounded-2xl border shadow-xl p-6 mx-4 pointer-events-auto animate-fadeIn"
-      >
+      <div className="relative w-full max-w-xl bg-white rounded-2xl border shadow-xl p-6 mx-4 pointer-events-auto animate-fadeIn">
         <button
           onClick={onRequestClose}
           className="absolute top-3 right-4 text-gray-400 hover:text-pink-600 text-3xl font-bold"
@@ -60,9 +60,9 @@ export default function ProductModal({ isOpen, onRequestClose, product }: Props)
               className="w-full h-72 object-contain rounded-lg border"
             />
 
-            {product.images && product.images.length > 1 && (
+            {product.image && product.image.length > 1 && (
               <div className="flex space-x-2 mt-4 overflow-x-auto">
-                {product.images.map((img, index) => (
+                {product.image.map((img, index) => (
                   <img
                     key={index}
                     src={img}
@@ -83,14 +83,16 @@ export default function ProductModal({ isOpen, onRequestClose, product }: Props)
               <p className="text-pink-600 text-2xl font-extrabold mb-4">{prixAffiche}</p>
 
               {product.description && (
-                <p className="text-gray-600 mb-4 whitespace-pre-wrap">{product.description}</p>
+                <p className="text-gray-600 mb-4 whitespace-pre-wrap">
+                  {product.description}
+                </p>
               )}
             </div>
 
             <button
               onClick={() => {
                 addToCart({
-                  id: product._id,
+                  _id: product._id,
                   name: product.name,
                   price: prix,
                   image: currentImage,

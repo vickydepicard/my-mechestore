@@ -1,4 +1,3 @@
-import React from "react";
 import { FiCreditCard, FiTruck, FiSmile } from "react-icons/fi";
 
 const features = [

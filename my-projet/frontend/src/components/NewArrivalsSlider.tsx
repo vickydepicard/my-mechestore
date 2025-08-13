@@ -1,35 +1,53 @@
-import React, { useEffect, useState, useContext } from "react";
-import { CartContext } from "./CartContext"; // Assure-toi d'importer le bon chemin
+import { useEffect, useState, useContext } from "react";
+import { CartContext } from "./CartContext";
 import ProductModal from "./ProductModal";
+import { Product } from "../components/types/Product";
 
 export default function NewArrivalsSlider() {
   const [items, setItems] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const { addToCart } = useContext(CartContext); // Utilisation du contexte panier
+  const [error, setError] = useState<string | null>(null);
+  const { addToCart } = useContext(CartContext);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   useEffect(() => {
+    setLoading(true);
+    setError(null);
+
     fetch("http://localhost:4000/api/products/new-arrivals")
-      .then((res) => res.json())
-      .then((data) => {
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data: Product[]) => {
         setItems(data);
         setLoading(false);
       })
       .catch((err) => {
         console.error("Erreur : ", err);
+        setError("Impossible de charger les produits");
         setLoading(false);
       });
   }, []);
 
-  const openModal = (product: Product) => {
-    setSelectedProduct(product);
+  const handleAddToCart = (product: Product) => {
+    const price = product.variants?.[0]?.prix ?? product.price ?? 0;
+    const image = product.image?.[0] ?? "/placeholder.jpg";
+
+    addToCart({
+      _id: product._id,
+      name: product.name,
+      price,
+      image,
+      quantity: 1,
+    });
   };
 
-  const closeModal = () => {
-    setSelectedProduct(null);
-  };
+  const openModal = (product: Product) => setSelectedProduct(product);
+  const closeModal = () => setSelectedProduct(null);
 
   if (loading) return <p className="text-center py-10">Chargement…</p>;
+  if (error) return <p className="text-center py-10 text-red-500">{error}</p>;
   if (!items.length) return <p className="text-center py-10">Aucun produit trouvé</p>;
 
   return (
@@ -39,20 +57,29 @@ export default function NewArrivalsSlider() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
           {items.map((p) => (
-            <div key={p._id} className="bg-white rounded-xl border shadow-sm hover:shadow-lg transition duration-300 flex flex-col">
+            <div
+              key={p._id}
+              className="bg-white rounded-xl border shadow-sm hover:shadow-lg transition duration-300 flex flex-col"
+            >
               <div className="overflow-hidden rounded-t-xl bg-gray-50 flex items-center justify-center p-4">
-                <img src={p.image} alt={p.name} className="object-contain max-h-48 transition-transform duration-300 hover:scale-105" />
+                <img
+                  src={p.image?.[0] ?? "/placeholder.jpg"}
+                  alt={p.name}
+                  className="object-contain max-h-48 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                />
               </div>
 
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div className="text-center">
                   <h3 className="font-medium text-gray-800 text-base line-clamp-2">{p.name}</h3>
-                  <p className="text-pink-600 font-bold text-lg mt-2">{p.price.toFixed(2)} €</p>
+                  <p className="text-pink-600 font-bold text-lg mt-2">
+                    {(p.variants?.[0]?.prix ?? p.price ?? 0).toLocaleString()} FCFA
+                  </p>
                 </div>
 
                 <div className="mt-4 space-y-2">
                   <button
-                    onClick={() => addToCart(p)} // Ajout du produit au panier
+                    onClick={() => handleAddToCart(p)}
                     className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-full text-sm font-semibold transition"
                   >
                     Ajouter au panier
@@ -69,13 +96,17 @@ export default function NewArrivalsSlider() {
           ))}
         </div>
 
-        {selectedProduct && (
-          <ProductModal
-            isOpen={!!selectedProduct}
-            onRequestClose={closeModal}
-            product={selectedProduct}
-          />
-        )}
+{selectedProduct && (
+  <ProductModal
+    isOpen={!!selectedProduct}
+    onRequestClose={closeModal}
+    product={{
+      ...selectedProduct,
+      image: [selectedProduct.image?.[0] ?? "/placeholder.jpg"], // tableau maintenant
+    }}
+  />
+)}
+
       </div>
     </section>
   );

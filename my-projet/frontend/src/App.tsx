@@ -1,5 +1,5 @@
 // src/App.tsx
-import React from "react";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -8,10 +8,8 @@ import { CartProvider } from "./components/CartContext";
 import { AuthProvider } from "./components/pages/connect/authContext";
 
 import ProductDetail from "./components/ProductDetail";
-import CategoryView from './components/CategoryView';
 import CategoryPage from './components/CategoryPage';
 import HeroSlider from './components/HeroSlider';
-import BestSellerSlider from './components/BestSellerSlider';
 import NewArrivalsSlider from "./components/NewArrivalsSlider";
 import USPs from "./components/USPs";
 import BlogPreview from "./components/BlogPreview";

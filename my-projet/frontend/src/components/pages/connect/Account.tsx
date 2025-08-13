@@ -1,5 +1,5 @@
 // src/pages/Account.tsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from './authContext';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ const Account = () => {
   useEffect(() => {
     if (!user) return;
 
-    fetch(`http://localhost:4000/api/orders/user/${user._id}`)
+    fetch(`http://localhost:4000/api/orders/user/${user.id}`)
       .then((res) => res.json())
       .then((data) => setOrders(data))
       .catch((err) => console.error('Erreur chargement commandes:', err));

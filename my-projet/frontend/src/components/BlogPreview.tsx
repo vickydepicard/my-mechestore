@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Article { id: string; title: string; excerpt: string; image: string; url: string; }
 

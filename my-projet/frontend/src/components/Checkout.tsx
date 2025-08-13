@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../components/CartContext';
 import { FiTrash2 } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
@@ -44,11 +44,12 @@ export default function Checkout() {
           <div className="md:col-span-2 space-y-6">
             {cartItems.map((item) => (
               <div key={item._id} className="flex gap-4 border-b pb-4">
-                <img
-                  src={item.images?.[0]}
-                  alt={item.name}
-                  className="w-24 h-24 object-cover rounded-md bg-gray-100"
-                />
+<img
+  src={item.image?.[0] ?? "/placeholder.jpg"} // ✅ remplacer images par image
+  alt={item.name}
+  className="w-24 h-24 object-cover rounded-md bg-gray-100"
+/>
+
                 <div className="flex-1">
                   <h2 className="text-lg font-semibold text-gray-800">{item.name}</h2>
                   <p className="text-sm text-gray-500">{item.price.toFixed(2)} € / unité</p>

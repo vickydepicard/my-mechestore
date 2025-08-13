@@ -1,14 +1,8 @@
-const express = require("express");
-const cors = require("cors");
-const Product = require("./models/Product"); // ton modèle
+import express from "express";
+import { getProductById } from "../controllers/productController";
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+const router = express.Router();
 
-app.get("/api/products/best-sellers", async (req, res) => {
-  const products = await Product.find().sort({ sales: -1 }).limit(10);
-  res.json(products);
-});
+router.get("/:id", getProductById);
 
-app.listen(5000, () => console.log("Backend running on port 5000"));
+export default router;

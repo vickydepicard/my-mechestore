@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';
 import { FiX } from 'react-icons/fi';
@@ -34,7 +34,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
               {cartItems.map((item) => (
                 <div key={item._id} className="flex items-center gap-4 border rounded-lg p-3">
                   <img
-                    src={item.images?.[0]}
+                    src={item.image?.[0]}
                     alt={item.name}
                     className="w-14 h-14 rounded object-contain bg-gray-100 cursor-pointer"
                     onClick={() => {

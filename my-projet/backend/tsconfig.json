@@ -3,14 +3,14 @@
     "target": "es6",
     "module": "commonjs",
     "rootDir": ".",
-    "outDir": "./dist",
+    "outDir": "dist",
     "strict": true,
-    "resolveJsonModule": true,  
+    "resolveJsonModule": true,
     "moduleResolution": "node",
-    "esModuleInterop": true,           // ou "esnext" si tu cibles ES modules
+    "esModuleInterop": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["**/*.ts", "routes/products.ts"],
-  "exclude": ["node_modules"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
